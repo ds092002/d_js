@@ -254,6 +254,9 @@
 // }
 
 
+//    =====================================================================================================   // 
+
+
 /* 
     continue statement -> for , while , do-while
                        -> continue , break
@@ -343,9 +346,91 @@
 
 /*  1 , 4 , 9 , 16 */
 
-let n = Number(prompt("Enter n : "));
- for (let i = 1; i <= n; i++){
-        if(i%2!=0) {
-            console.log(i*i);
+// let n = Number(prompt("Enter n : "));
+// let txt = " ";
+//  for (let i = 1; i <= n; i++){
+//         {
+//             txt = txt + (i * i) + " ";
+//         }
+//      }
+//      console.log(txt);
+
+
+/*    1 , 4 , 3 , 16 , 5 */
+
+// let n = Number(prompt("Enter n : "));
+// let txt = " ";
+//  for (let i = 1; i <= n; i++){
+//        if(i%2==0){
+//             txt = txt + (i * i) + " ";
+//         }else{
+//             txt = txt + i + " ";
+//         }
+//      }
+//      console.log(txt);
+
+
+/*   1 , 2 , 4 , 8 , 16  */
+
+// let n = Number(prompt("Enter n : "));
+// let txt = " ";
+//  for (let i = 1; i <= n; i*=2){
+//         {
+//             txt = txt + i + " ";
+//         }
+//      }
+//      console.log(txt);
+
+
+/* 1 , 4 , 12 , 32 , 80   */
+
+// let n = Number(prompt("Enter n : "));
+// let a = 1;
+// let txt = " ";
+//  for (let i = 1; i <= n; i++){
+//         {
+//             txt = txt + (a * i) + " ";
+//             a *= 2;
+//         }
+//      }
+//      console.log(txt);
+
+/* Total 1, 2 , 3 ......, 10 = 55 */
+
+// let sum = 0;
+// let txt = " ";
+//  for (let i = 1; i <= 10; i++){
+//      sum += i;      
+//         {
+//             txt =  sum + " ";
+//         }
+//      }
+//      console.log("Sum is : ",txt);
+     
+     
+ /* Total Odd 1 , 3 , 5 */     
+     
+// let sum = 0;
+// let txt = " ";
+//  for (let i = 1; i <= 6; i+=2){
+//      sum += i;      
+//         {
+//             txt =  sum + " ";
+//         }
+//      }
+//      console.log("Odd Sum Total is : ",txt);
+
+
+ /* Total Odd 1 , 3 , 5 */     
+     
+let sum = 0;
+let txt = " ";
+ for (let i = 2; i <= 6; i+=2){
+     sum += i;      
+        {
+            txt =  sum + " ";
         }
      }
+     console.log("Even Sum Total is : ",txt);
+
+    
