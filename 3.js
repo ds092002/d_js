@@ -252,3 +252,100 @@
 // if (100 < y && y < 500) {
 //     console.log("Value Of Y is : "+y);
 // }
+
+
+/* 
+    continue statement -> for , while , do-while
+                       -> continue , break
+    for in , for of (array , object) -> forEach
+*/
+
+// let x = Number(prompt("Enter x : "));
+// for (let i = 1; i <= x; i++){
+//         console.log(i);
+// }
+// let x = Number(prompt("Enter x : "));
+// let txt = " ";
+// for (let i = 1; i <= x; i++){
+    //     txt = txt + i + " ";
+    // }
+    // console.log(txt);
+    
+    /*   10 - 1 */    
+    
+    // for (let i = 10; i >= 1; i--){
+        //         console.log(i);
+// }
+
+
+/*   51 - 99 */
+
+// let txt = " ";
+// for (let i = 51 ; i <= 99 ; i++){
+    //     txt = txt + i + " ";
+    // }
+    // console.log(txt);
+    
+    
+/*  1 -  n  */
+
+// let n = Number(prompt("Enter n : "));
+// let txt = " ";
+//  for (let i = 1; i <= n; i++){
+//         txt = txt + i + " ";
+//      }
+//     console.log(txt);
+
+
+/*  n -  1  */
+
+// let n = Number(prompt("Enter n : "));
+// let txt = " ";
+//  for (let i = n; i >= 1; i--){
+//         txt = txt + i + " ";
+//      }
+//     console.log(txt);
+
+
+/*    -n   -   n   */
+
+// let n = Number(prompt("Enter n : "));
+// let txt = " ";
+//  for (let i = -n; i <= n; i++){
+//         txt = txt + i + " ";
+//      }
+//     console.log(txt);
+
+
+/*    odd  -   n   */
+
+// let n = Number(prompt("Enter n : "));
+// let txt = " ";
+//  for (let i = 1; i <= n; i++){
+//         if(i%2==0) {
+//             txt = txt + i + " ";
+//         }
+//      }
+//     console.log(txt);
+
+
+/*    even  -   n   */
+
+// let n = Number(prompt("Enter n : "));
+// let txt = " ";
+//  for (let i = 1; i <= n; i++){
+//         if(i%2!=0) {
+//             txt = txt + i + " ";
+//         }
+//      }
+//     console.log(txt);
+
+
+/*  1 , 4 , 9 , 16 */
+
+let n = Number(prompt("Enter n : "));
+ for (let i = 1; i <= n; i++){
+        if(i%2!=0) {
+            console.log(i*i);
+        }
+     }
