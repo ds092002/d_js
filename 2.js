@@ -1,9 +1,11 @@
 /* operator
-Arithmatic => + - * / %**++
-relational => < <= > >= != === != ?:
-Assigment => += -====*=
-logical => && || ! ^(XOR)
-typeof
+
+      Arithmatic => + - * / %**++
+      relational => < <= > >= != === != ?:
+      Assigment => += -====*=
+      logical => && || ! ^(XOR)
+      typeof
+
 */
 // console.log(5**3);
 

@@ -14,7 +14,7 @@
 // var a=7;
 // console.log("value of is : ",a);
 
-// a = "Hello";
+// a = "Hello..";
 // console.log(a);
 
 // var a = true;
