@@ -415,19 +415,21 @@
 //  for (let i = 1; i <= 6; i+=2){
 //      sum += i;      
 //         {
+//             console.log(i);
 //             txt =  sum + " ";
 //         }
 //      }
 //      console.log("Odd Sum Total is : ",txt);
 
 
- /* Total Odd 1 , 3 , 5 */     
+ /* Total Even 2 , 4 , 6 */     
      
 let sum = 0;
 let txt = " ";
  for (let i = 2; i <= 6; i+=2){
      sum += i;      
         {
+            console.log(i);
             txt =  sum + " ";
         }
      }

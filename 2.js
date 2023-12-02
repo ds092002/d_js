@@ -7,7 +7,6 @@ typeof
 */
 // console.log(5**3);
 
-
 // console.log(10 == 10) // only value chaeck
 // console.log(10 == "10")// only value chaeck
 // console.log(10 === "10")// value chaeck and data type check
