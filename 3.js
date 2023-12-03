@@ -5,12 +5,13 @@
 // let a = Number(prompt("Enter a : "));
 // let b = Number(prompt("Enter b : "));
 
+//     console.log("Value of A is : "+a);
+//     console.log("Value of B is : "+b);
+
 // if (a > b) {
-//     console.log("Value of a is : "+a);
 //     console.log("A is Big");
 // }
 // else{
-//     console.log("Value of b is : "+b);
 //     console.log("A is Small");
 // }
 
@@ -18,7 +19,7 @@
 /* 2 = Positive Or Negitive*/
 
 // let a = Number(prompt("Enter a : "));
-// console.log("Enter A value : "+a);
+// console.log("A value is : "+a);
 
 // if (0 < a) {
 //     console.log("A is Positive ");
@@ -82,7 +83,6 @@
 
 /* 6 = leap year */
 
-
 // let a = Number(prompt("Enter a : "));
 // console.log("Enter  value : "+a);
 
@@ -94,7 +94,6 @@
 // }
 
 /* 7 = a,b,c Largest Among */
-
 
 // let a = Number(prompt("Enter a : "));
 // let b = Number(prompt("Enter b : "));
@@ -113,8 +112,6 @@
 // else{
 //     console.log("C is Big");
 // }
-
-
 
 /* 8 = Electricity */
 
@@ -153,7 +150,6 @@
 //     console.log("Not Eligible For Vote");
 // }
 
-
 /* 10 = Salary Slab */
 
 // let basic = Number(prompt("Enter Basic : "));
@@ -186,7 +182,6 @@
 // console.log("DA : ",da);
 // console.log("Gross : ",gross);
 
-
 /* 11 = Income Tax Slab */
 
 // let income = Number(prompt("Enter Income : "));
@@ -208,7 +203,6 @@
 // }
 
 // console.log("Total Tax Is : ",tax);
-
 
 /* 12 = Students Marks */
 
@@ -243,7 +237,6 @@
 //     console.log("Fail");
 // }
 
-
 /* 13 = Assign Value */
 
 // let x = Number(prompt("Enter X : "));
@@ -255,7 +248,6 @@
 // if (100 < y && y < 500) {
 //     console.log("Value Of Y is : "+y);
 // }
-
 
 //    =====================================================================================================   // 
 
@@ -430,15 +422,37 @@
 
  /* Total Even 2 , 4 , 6 */     
      
-let sum = 0;
-let txt = " ";
- for (let i = 2; i <= 6; i+=2){
-     sum += i;      
-        {
-            console.log(i);
-            txt =  sum + " ";
-        }
-     }
-     console.log("Even Sum Total is : ",txt);
+// let sum = 0;
+// let txt = " ";
+//  for (let i = 2; i <= 6; i+=2){
+//      sum += i;      
+//         {
+//             console.log(i);
+//             txt =  sum + " ";
+//         }
+//      }
+//      console.log("Even Sum Total is : ",txt);
 
-    
+
+/* ======================================================== */
+
+// Continue and Break Statment
+
+// for (let i = 1; i <= x; i++) {
+    //             // if (i==3)
+    //              if(i==3||i==7){
+        //                 // break;
+        //                 continue;
+        //             }
+        //             console.log(i);
+        // }
+        
+
+/* ======================================================== */
+
+// do - while
+
+// let i = 1;
+// do{
+//     console.log(i++);
+// }while (i<=x);
