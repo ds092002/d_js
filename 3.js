@@ -446,6 +446,7 @@
 // do - while
 
 // let i = 1;
+// let x = Number(prompt("Enter X : "));
 // do{
 //     console.log(i++);
 // }while (i<=x);
