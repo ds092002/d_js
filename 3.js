@@ -431,6 +431,7 @@
 
 // Continue and Break Statment
 
+// let x = Number(prompt("Enter X : "));
 // for (let i = 1; i <= x; i++) {
     //             // if (i==3)
     //              if(i==3||i==7){
