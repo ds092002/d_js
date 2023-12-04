@@ -232,8 +232,7 @@
 // else if(marks<=45 && marks>=35){
 //     console.log("Grad D");
 // }
-// else
-// {
+// else{
 //     console.log("Fail");
 // }
 
@@ -268,14 +267,14 @@
 // let x = Number(prompt("Enter x : "));
 // let txt = " ";
 // for (let i = 1; i <= x; i++){
-    //     txt = txt + i + " ";
-    // }
-    // console.log(txt);
+//     txt = txt + i + " ";
+// }
+// console.log(txt);
     
-    /*   10 - 1 */    
+/*   10 - 1 */    
     
-    // for (let i = 10; i >= 1; i--){
-        //         console.log(i);
+// for (let i = 10; i >= 1; i--){
+//         console.log(i);
 // }
 
 
@@ -283,9 +282,9 @@
 
 // let txt = " ";
 // for (let i = 51 ; i <= 99 ; i++){
-    //     txt = txt + i + " ";
-    // }
-    // console.log(txt);
+//     txt = txt + i + " ";
+// }
+// console.log(txt);
     
     
 /*  1 -  n  */
@@ -346,11 +345,9 @@
 
 // let n = Number(prompt("Enter n : "));
 // let txt = " ";
-//  for (let i = 1; i <= n; i++){
-//         {
+//  for (let i = 1; i <= n; i++) {
 //             txt = txt + (i * i) + " ";
 //         }
-//      }
 //      console.log(txt);
 
 
@@ -373,9 +370,7 @@
 // let n = Number(prompt("Enter n : "));
 // let txt = " ";
 //  for (let i = 1; i <= n; i*=2){
-//         {
-//             txt = txt + i + " ";
-//         }
+//         txt = txt + i + " ";
 //      }
 //      console.log(txt);
 
@@ -386,10 +381,8 @@
 // let a = 1;
 // let txt = " ";
 //  for (let i = 1; i <= n; i++){
-//         {
-//             txt = txt + (a * i) + " ";
-//             a *= 2;
-//         }
+//          txt = txt + (a * i) + " ";
+//          a *= 2;
 //      }
 //      console.log(txt);
 
