@@ -24,7 +24,7 @@
         concat -> merge two string
 */        
 
-let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";
+// let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";
 
 // console.log(data.length)
 
@@ -48,6 +48,8 @@ let data = "JavaScript is the world's most popular programming language.JavaScri
 // console.log(data.charCodeAt(56));
 
 // console.log(data.concat("Hello" , "\n Skill Qode"));
+
+let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";
 
 // console.log(data.replace("JavaScript" , "Moye Moye "))
 // console.log(data.replace(/javaScript/i , "Moye Moye "))
