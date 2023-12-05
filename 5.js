@@ -47,4 +47,32 @@ let data = "JavaScript is the world's most popular programming language.JavaScri
 // console.log(data.charAt(56));
 // console.log(data.charCodeAt(56));
 
-console.log(data.concat("Hello" , "\n Skill Qode"));
+// console.log(data.concat("Hello" , "\n Skill Qode"));
+
+// console.log(data.replace("JavaScript" , "Moye Moye "))
+// console.log(data.replace(/javaScript/i , "Moye Moye "))
+// console.log(data.replace(/JavaScript/g , "Moye Moye "))
+
+// console.log(data.replaceAll("programming" , "Moye Moye"))
+
+// let txt = "           Hello World            ";
+// console.log(txt);
+// console.log("Length is : "+txt.length)
+
+// console.log(txt.trim());                // Remove Extra Space
+// console.log("Length is : "+(txt.trim()).length);
+
+// console.log(txt.trimStart());                // Remove Extra Space From Start
+// console.log("Length is : "+(txt.trimStart()).length);
+
+// console.log(txt.trimEnd());                // Remove Extra Space From End
+// console.log("Length is : "+(txt.trimEnd()).length);
+
+// let txt = "Hello";
+// console.log(txt.padStart(8,"XXX"));
+
+// let txt = "1234";
+// console.log(txt.padEnd(8,"*"));
+// console.log(txt.padEnd(8,"*").concat(9));
+
+console.log(data.split(" "));
