@@ -37,10 +37,10 @@
 
 /* Function Are Object */
 
-function myFunction(a,b,c) {
-    return a , b , c;
+function myFunction(a, b, c) {
+    return a, b, c;
 }
-let text = myFunction(1,2,3);
+let text = myFunction(1, 2, 3);
 console.log(text);
 
 // for string
@@ -80,7 +80,7 @@ console.log(text);
 //     let sum = 0;
 //     for (let i = 0; i < args.length; i++)
 //             sum+=args[i];
-//     return sum;    
+//     return sum;
 // }
 
 // let x = sum(1,2,3,4,5,6,7,8,9,10);
@@ -93,7 +93,7 @@ console.log(text);
 //     let sum = 0;
 //     for (let i = 0; i < arguments.length; i++)
 //             sum += arguments[i];
-//     return sum;    
+//     return sum;
 // }
 
 // let x = sum(1,2,3,4,5,6,7,8,9);
