@@ -137,6 +137,13 @@
 // function object
 
 // function myObject(){
+//     return arguments;
+// }
+
+// let x = myObject(1,2,3,4,5);        // argument like as array
+// console.log(x);
+
+// function myObject(){
 //     return arguments.length;
 // }
 
@@ -254,10 +261,10 @@ let person = {
   };
   
   let data = {
-    firstName: "Virat",
-    lastName: "Kohli",
+    firstName: "M.S",
+    lastName: "Dhoni",
   };
   
   console.log(person.fullname("Surat"));
-  let aa = person.fullname.bind(data, "Surat")();
+  let aa = person.fullname.bind(data, "Ranchi")();
   console.log(aa);
