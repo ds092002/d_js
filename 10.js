@@ -1,11 +1,11 @@
-/* Function  */
+/*======|Function|=====  */
 
 // let x = function(a,b){return a * b };
 // let z = x(4,3);
 // console.log(z);
 
 
-/* Self - invoking Function ---   IIFE */
+/* ======|Self - invoking Function ---   IIFE|===== */
 
 // (function (a,b,c,d,e,f) {
     // console.log("Value is : ",a,b,c,d,e,f);
@@ -14,14 +14,14 @@
 // })(1,2,3,4,5,6);
 
 
-/* Function Constrcuctor */
+/*======| Function Constrcuctor |====== */
 
 // const myFunction = new Function("a","b","return a * b");
 // let x = myFunction(4,3);
 // console.log(x);
 
 
-/* Arrow Function */
+/*======| Arrow Function |======*/
 
 // ES5
 
@@ -36,7 +36,7 @@
 // console.log(x(7,7));
 
 
-/* Function Are Object */
+/* ======| Function Are Object |======*/
 
 // function myFunction(a, b, c) {
 //     return a, b, c;
@@ -59,7 +59,7 @@
 // console.log(text(4,5));
 
 
-/*  Arrow Function => */
+/* ======| Arrow Function => |======*/
 
 // ES5
 
@@ -75,7 +75,7 @@
 // console.log(x(10,5));
 
 
-/* Function Rest Parameters */
+/*======| Function Rest Parameters |======*/
 
 // function sum(...args){
 //     let sum = 0;
@@ -88,7 +88,7 @@
 // console.log(x);
 
 
-/* Argument Object */
+/* ======| Argument Object |======*/
 
 // function sum(){
 //     let sum = 0;
@@ -102,7 +102,7 @@
 
 /*=============================Classes====================================*/
 
-// function constructor
+// ======| function constructor |======
 
 // const prodcut = function (a,b,c){
 //     return a*b*c;
@@ -115,13 +115,13 @@
 
 // a(10,20,30);
 
-// Self-invoking function (IIFE)
+//======| Self-invoking function (IIFE) |======
 
 // (function (a,b,c,d,e,f){
 //     console.log('value is: ',a,b,c,d,e,f);
 // })(1,2,3,4,5,6);
 
-// Arrow function (ES6)
+//======| Arrow function (ES6) |======
 
 // const prodcut = function (a,b,c){
 //     return a*b*c;
@@ -134,7 +134,7 @@
 
 // console.log(product(10,50,6));
 
-// function object
+//======| function object |======
 
 // function myObject(){
 //     return arguments;
@@ -150,7 +150,7 @@
 // let x = myObject(1,2,3,4,5);        // argument like as array
 // console.log(x.toString());
 
-// Rest parameter   => spread operator (...)
+//======| Rest parameter   => spread operator (...) |======
 
 // function Addition(...args) { 
 //   let s = 0;
@@ -170,7 +170,7 @@
 // Addition(1,2,3,5,4);
 
 
-/* Argument Object */
+/*======| Argument Object |======*/
 
 // function sum(){
 //     let sum = 0;
@@ -182,7 +182,7 @@
 // let x = sum(1,2,3,4,5,6,7,8,9);
 // console.log(x);
 
-// function generator => yield
+//======| function generator => yield |======
 
 // function* hello(a,b){
 //   yield a+b;
@@ -198,7 +198,7 @@
 // console.log(a.next().value) // 3
 // console.log(a.next().value) // 4
 
-// this keyword
+//======| this keyword |======
 
 // let person = {
 //   firstName: "Skill",
@@ -210,7 +210,7 @@
 // }
 // console.log(person.fullname())
 
-// // call method
+// ======| call method |======
 
 // let person = {
 //   fullname: function (city) {
@@ -230,7 +230,7 @@
 
 // console.log(person.fullname.call(data, "surat") );
 
-// apply method
+//======| apply method |======
 
 // let person = {
 //   fullname: function (city) {
@@ -250,7 +250,7 @@
 
 // console.log(person.fullname.apply(data, ["surat"]) );
 
-// bind method
+//======| bind method |======
 
 let person = {
     firstName: "Skill",
