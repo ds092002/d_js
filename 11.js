@@ -49,15 +49,15 @@
 // a.sort();
 
 // let ar = [56,98,32,1,78,9,7,60,43,25,11,15];
-// console.log(ar.sort((a,b) => {return a - b}));
+// console.log(ar.sort((a,b) =>a - b));
 
 //====|Reverse|====
 
-let ar = [56,98,32,1,78,9,7,60,43,25,11,15];
+let a = [56,98,32,1,78,9,7,60,43,25,11,15];
 // let ar = ["Watermelon","Kiwi","Orange","Mango","Apple","Banana"];
-ar.sort();
+// ar.sort();
 // ar.sort((a-b)=>{return a-b});
-console.log(ar.sort((a,b) => {return a - b}));
-ar.reverse();
+console.log(a.sort((a,b) => a - b));
+console.log(a.reverse());
 // console.log(ar);
 
