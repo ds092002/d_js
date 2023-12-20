@@ -32,7 +32,7 @@
 // The setTimeout() method returns the interval id.
 
 // {
-//     // program to display a text using 
+//     // program to display a text using
 //     function greet(){
 //         console.log('Hello World');
 //     }
@@ -108,7 +108,7 @@
 //  You also pass additional arguments to the setTimeout() method.
 
 // {
-    // setTimeout(function, millisecond, parameter1, ....parameterN);
+// setTimeout(function, millisecond, parameter1, ....parameterN);
 // }
 
 // When you pass additional parameter to the setTimeout() mathod, these parameters (paramter1, parameter2, ....etc) will be passed to the specified function.
@@ -130,19 +130,19 @@
 // program With setTimeout()
 
 // {
-    // program that show the dalay in execution
+// program that show the dalay in execution
 
-    // function greet() {
-    //     console.log('Hello World');
-    // }
+// function greet() {
+//     console.log('Hello World');
+// }
 
-    // function sayName(name) {
-    //     console.log('Hello' + ' ' + name);
-    // }
+// function sayName(name) {
+//     console.log('Hello' + ' ' + name);
+// }
 
-    // // calling the function
-    // setTimeout(greet,3000);
-    // sayName('M.S.Dhoni')
+// // calling the function
+// setTimeout(greet,3000);
+// sayName('M.S.Dhoni')
 // }
 
 // JavaScript promise and promise chaining
@@ -169,4 +169,135 @@
 // If the Promise returns successfully, the resolve() function is called. And , if an error occurs, the reject() function is called.
 // }
 
+// Program with a Promise
 
+// {
+//     const count = false;
+
+//     let countValue = new Promise(function (resolve, reject){
+//         if(count){
+//             resolve('There Is a count value.');
+//         }else{
+//             reject("There is no count value.");
+//         }
+//     });
+
+//     // console.log(countValue);
+
+//     countValue.then((result)=>console.log(result)).catch((err)=>console.log(err));
+// }
+
+// Javascript Promise Chaining
+
+// Promise are useful when you have to handle more then one asynchrononus task, one after another. For that , we use promise chaining.
+
+// You can perfrom an operation after a promise is resolved using method then(), catch() and finally().
+
+// JavaScript then() method
+
+// The then() method is used with the callback when the promise is successfully fulfiled or resolved.
+
+// The syntax of then() method is
+
+// {
+//     promiseObject.then(onFulfilled, onRejectd);
+// }
+
+// Chaining the Promise with then()
+
+// {
+//     // return a promise
+
+//     let coutValue = new Promise(function (resolve, reject) {
+//         resolve("Promise Resolved");
+//         // reject("Promise Reject");
+//     });
+
+//     // executes when promise is resolved successfully
+
+//     coutValue
+//     .then(function successValue(result){
+//         console.log(result);
+//     })
+
+//     .then(function successValue(){
+//         console.log('You can call multiple function this way.');
+//     })
+//     .then(()=>{
+//         console.log('Hello Wolrd');
+//     })
+//     .catch((err)=>{
+//         console.log(err);
+//     });
+// }
+
+// JavaScript catch() method.
+
+// The catch() method is used with the callbacks when the promise is rejected or if an error occues.
+
+// {
+//     // return a Promise
+//     let countValue = new Promise(function (resolve, reject) {
+//         reject("Promise Rejected");
+//         // resolve("Promise Resolve");
+//     });
+
+//     // Executes when promise is resolved successfully
+//     countValue.then(
+//         function successValue(result) {
+//             console.log(result);
+//         },
+//     )
+
+//     // Executes if there is an error
+//     .catch(
+//         function errorValue(result) {
+//             console.log(result);
+//         }
+//     );
+
+// }
+
+// JavaScript finally() method.
+
+// {
+//     // You can also use the finally() method with promise . The finally() method gets executed when the promise is either resolved successfully or rejected.
+
+//     // return a Promise
+//     let countValue = new Promise(function (resolve, reject){
+//         // could be resolved or rejected
+//         resolve('Promise Resolved');
+//         // reject('Promise Rejectd');
+//     });
+
+//     // add other blocks of code
+//     countValue
+//     .then(result=>console.log(result))
+//     .catch((err)=>console.log(err))
+//     .finally(
+//         function greet() {
+//             console.log('This Code Is Executed');
+//         }
+//     );
+// }
+
+
+
+
+// {
+//     // callback function
+
+//     function greet(n){
+//         console.log('Total Is : ',n);
+//     }
+
+//     function sum(a,b,myCallback){
+//         let total = a + b;
+//         myCallback(total);
+//     }
+//     sum(3,4,greet);
+// }
+
+
+// setTimeout, callback Function, Promise(resolve, reject) => always return callback function.
+// fullFiled -> then method ,      rejected -> catch method
