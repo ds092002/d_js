@@ -27,3 +27,39 @@ function red(one) {
 //         obj.innerHTML = "Thank You";
 //     }
 // }
+
+/* JavaScrpit addEventLister() */
+
+// {
+//     const x = document.getElementById("clickIt");
+//     const y = document.getElementById("hoverPara");
+
+//     x.addEventListener("click",RespondClick);
+//     y.addEventListener("mouseover",RespondMouseOver);
+//     y.addEventListener("mouseout",RespondMouseOut);
+
+//     function RespondMouseOver(){
+//         document.getElementById("effect").innerHTML+="MouseOver Event" + "<br>";
+//     }
+//     function RespondMouseOut(){
+//         document.getElementById("effect").innerHTML+="MouseOut Event" + "<br>";
+//     }
+//     function RespondClick(){
+//         document.getElementById("effect").innerHTML+="Click Event" + "<br>";
+//     }
+// }
+
+
+
+
+
+// projects
+/*
+    1. calculator
+    2. digital clock / counter
+    3. word length counter
+    4. vowel character counter
+    5. random string generator
+    6. to-do list
+    7. budget app 
+*/
