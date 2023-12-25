@@ -77,7 +77,7 @@
 // 5. Type of
 
 
-let x = 10 , y = 20 , z;
+// let x = 10 , y = 20 , z;
 
 // Arithmetic =>
 // console.log(x+y);    //30
@@ -149,5 +149,40 @@ let x = 10 , y = 20 , z;
 // z = x++ || y++;   // 11 , 20 , 10
 // z = x-- || y--;   //  9 , 20 , 10
 // console.log(x,y,z);
-z = 40;
-console.log(x,+y,z);
+// z = 40;
+// console.log(x,+y,z);
+// console.log(x != y);   // true
+// console.log(1^1);   // 0
+// console.log(0^1);   // 1
+// console.log(0^0);   // 0
+// console.log(1^0);   // 1
+// console.log(1^0^1);   // 0
+// console.log(1^1^1);   // 1
+// console.log(0^1^1);   // 0
+// console.log(0^1^0);   // 1
+// console.log(0^0^0);   // 0
+
+// console.log(null===NaN);   // false
+// console.log(null==NaN);   // false
+// console.log(null==undefined);   // true
+// console.log(null===undefined);   // true
+
+
+// console.log(typeof(10));
+// console.log(typeof('10'));
+// console.log(typeof(true));
+// console.log(typeof(10 - 5));
+// console.log(typeof(10 - "5"));
+// console.log(typeof('10' - "5"));   
+
+/* Conditional Statement*/
+
+// let a = Number(prompt('Enter a : '))
+// let b = Number(prompt('Enter b : '))
+
+// if (a>b) {
+//     console.log("big");
+// }else{
+//     console.log("small");
+// }
+
