@@ -249,7 +249,7 @@
 
 // collection of characters (array)
 
-let txt;
+// let txt;
 // let str = "Hello World";
 // let str = 'Skill Qode'
 // console.log(str);
@@ -257,11 +257,11 @@ let txt;
 // txt = 'My Name Is "Dhaval"'
 // console.log(txt);
 
-let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";    // 110
+// let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";    // 110
 
 // let a = data.length
 // console.log(a);
-console.log(data.length);
+// console.log(data.length);
 
 // end position not include in slice
 // console.log(data.slice(5,12));
@@ -278,3 +278,145 @@ console.log(data.length);
 // substr() is similar to slice(). but the difference is that second perameter is specifies the length.
 // console.log(data.substr(14,5));
 // console.log(data.substr(-7,7));
+
+// replace() method replace a specified value with another value
+// console.log(data.replace("JavaScript","C"));
+// console.log(data.replace(/JavaScript/g,"C++"));
+
+// console.log(data.replaceAll("language","Devloper"));
+// console.log(data.replaceAll("is ","are "));
+
+// console.log(data.toUpperCase());
+// console.log(data.toLowerCase());
+
+// let data2 = 'String Methods';
+// console.log(data.concat("  ",data2).concat(". String to rest of all String"));
+
+
+// console.log(data);
+// console.log(data.trim());
+// console.log(data.trimStart());
+// console.log(data.trimEnd());
+
+// const d = "Dhaval";
+// console.log(d.padStart(9,"007"));
+// let txt = "Hello";
+// console.log(txt.padStart(8,"XXX"));
+
+// const d = "Dhaval";
+// console.log(d.padEnd(9,"007"));
+// let t = "Hello";
+// console.log(t.padEnd(8,"XXX"));
+// let txt = "1234";
+// console.log(txt.padEnd(8,"*"));
+// console.log(txt.padEnd(8,"*").concat(9));
+
+
+// chatAt return the string charecter with using  index number
+// console.log(data.charAt(24));
+
+// charCodeAt return the string charecters Ascci Value with using  index number and they return a UTF-16 Code in between 0 and 65535.
+// console.log(data.charCodeAt(24));
+
+
+// split() method is convert sting to array
+// console.log(data.split(" "));
+
+
+
+/* Math Object */
+
+// console.log(Math.E);   // return euler's number 2.718281828459045
+// console.log(Math.PI);
+
+// console.log(Math.round(4.2));    // return nearest integer
+// console.log(Math.round(4.6));
+// console.log(Math.round(-4.9));
+
+// console.log(Math.ceil(5.1));      // return Ronud up value
+// console.log(Math.ceil(8.2));
+// console.log(Math.ceil(-6.5));
+
+// console.log(Math.floor(4.6));     // return Round Down value
+// console.log(Math.floor(7.2));
+// console.log(Math.floor(-7.2));
+
+// console.log(Math.trunc(7.79789));    // removing fectorial digit
+// console.log(Math.trunc(-8.23));
+
+// console.log(Math.sign(7));   // return negetive , positive , null 
+// console.log(Math.sign(0));
+// console.log(Math.sign(-7));
+
+// console.log(Math.pow(4,4));    // return x to the power of y 
+// console.log(Math.pow(10,4));
+
+// console.log(Math.sqrt(256));      // return squre root of number
+// console.log(Math.sqrt(625));
+// console.log(Math.sqrt(25));
+
+// console.log(Math.abs(-7));      // return absolute (positive) number
+// console.log(Math.abs(-2.23));
+// console.log(Math.abs(.23));
+
+// console.log(Math.min(52,63,10,2,8,7));
+// console.log(Math.max(52,63,10,2,8,7));
+
+// console.log(Math.random());
+
+
+
+/*
+    Math.E eluer number
+    Math.PI pi number
+    Math.round  return nearest number
+    Math.ceil   return round up value
+    Math.floor return round down value
+    Math.trunc  remove fectorial digit
+    Math.abs  return absolute (positive) number
+    Math.pow  return x power by y
+    Math.min  return minimum number
+    Math.max  return maximum number
+    Math.sqrt  return squre root
+    Math.sign  return negitive, positive , null number
+*/
+
+
+
+/* Date Method */
+
+let d = new Date();
+// console.log(d);
+// let d = new Date("2024-03-09 06:30 AM")
+// console.log(d);
+// let d = new Date(2024,9,2,5,18,62)    // => year,month,date,hour,min.sec  => month = 0 - 11 
+// console.log(d);
+
+// console.log(d.toString());    //Tue Dec 26 2023 17:47:27 GMT+0530 (India Standard Time)
+// console.log(d.toDateString()); //Tue Dec 26 2023
+// console.log(d.toISOString()); //2023-12-26T12:18:14.854Z
+// console.log(d.toUTCString()); // Tue, 26 Dec 2023 12:18:24 GMT
+// console.log(d.toLocaleDateString()); // 26/12/2023
+// console.log(d.toLocaleTimeString());//17:48:37
+// console.log(d.toLocaleString()); //26/12/2023, 17:48:43
+
+// console.log(d.getFullYear());    // get year in four digit
+// console.log(d.getMonth());      // get month in  (0-11)
+// console.log(d.getDate());       // get Date in (1-31)
+// console.log(d.getDay());        // get Weekday in (0-6)
+// console.log(d.getHours());      // get hours (0-23)
+// console.log(d.getMinutes());    // get minites (0-59)
+// console.log(d.getSeconds());    // get seconds (0-59)
+// console.log(d.getMilliseconds()); // get millisec (0-999)
+// console.log(d.getTime());       // get Time since january 1, 1970
+// console.log(d.getTimezoneOffset()); 
+
+d.setFullYear(2023);
+d.setMonth(2);
+d.setDate(9);
+d.setHours(6);
+d.setMinutes(30);
+d.setSeconds(30);
+d.setMilliseconds(999);
+//d.setTime(1615645665566);
+console.log(d);

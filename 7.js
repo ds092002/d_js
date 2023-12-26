@@ -1,4 +1,4 @@
-// Data Method
+// Date Method
 
 let d = new Date();
 // console.log(d);

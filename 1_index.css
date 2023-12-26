@@ -8,7 +8,7 @@
 .Down{
     color: bisque;
 }
-.center {
+/* .center {
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
@@ -239,4 +239,4 @@
     .container {
       font-size: 20px;
     }
-  }
+  } */
