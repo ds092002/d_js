@@ -385,7 +385,7 @@
 
 /* Date Method */
 
-let d = new Date();
+// let d = new Date();
 // console.log(d);
 // let d = new Date("2024-03-09 06:30 AM")
 // console.log(d);
@@ -411,12 +411,80 @@ let d = new Date();
 // console.log(d.getTime());       // get Time since january 1, 1970
 // console.log(d.getTimezoneOffset()); 
 
-d.setFullYear(2023);
-d.setMonth(2);
-d.setDate(9);
-d.setHours(6);
-d.setMinutes(30);
-d.setSeconds(30);
-d.setMilliseconds(999);
-//d.setTime(1615645665566);
-console.log(d);
+// d.setFullYear(2023);
+// d.setMonth(2);
+// d.setDate(9);
+// d.setHours(6);
+// d.setMinutes(30);
+// d.setSeconds(30);
+// d.setMilliseconds(999);
+// //d.setTime(1615645665566);
+// console.log(d);
+
+
+
+// let data = "777";
+// console.log(data);
+// console.log(Number(data));
+
+// let data = 12.47995404;
+// console.log(data);
+// console.log(data.toString());
+// console.log((12+4565).toString());
+
+// let x = 2.718281828459045;
+// console.log(x.toExponential(8));
+// console.log(x.toExponential(6));
+// console.log(x.toExponential(5));
+// console.log(x.toExponential(4));
+// console.log(x.toExponential(2));
+
+// let x = 2.718281828459045;
+// console.log(x.toFixed(8));
+// console.log(x.toFixed(2));
+// console.log(x.toFixed(6));
+
+// let x = 2.718281828459045;
+// console.log(x.toPrecision(10));
+// console.log(x.toPrecision(6));
+
+// let x = 2.718281828459045;
+// console.log(x.valueOf());
+// console.log((45+65).valueOf());
+
+
+// console.log(Number(true));
+// console.log(Number(false));
+// console.log(Number("10"));
+// console.log(Number("98 "));
+// console.log(Number(" 69"));
+// console.log(Number(" 69   "));
+// console.log(Number("143.69"));
+// console.log(Number("13,69"));
+// console.log(Number("13 69"));
+// console.log(Number("D2"));         
+
+// console.log(parseInt('-20'));
+// console.log(parseInt('-20.7'));
+// console.log(parseInt('7'));
+// console.log(parseInt('7 8 9'));
+// console.log(parseInt('25 year'));
+// console.log(parseInt('year 02'));
+
+// console.log(parseFloat('496'));
+// console.log(parseFloat('-496.745'));
+// console.log(parseFloat('   56 '));
+// console.log(parseFloat('45   '));
+// console.log(parseFloat('  5    '));
+// console.log(parseFloat('745 old'));
+// console.log(parseFloat(' bvyhui 6458'));
+
+// console.log(Number.isInteger(10));
+// console.log(Number.isInteger(-1.7));
+// console.log(Number.isInteger(6.7));
+
+// console.log(Number.isSafeInteger(45595495954945555544145612121020202));
+// console.log(Number.isSafeInteger(45.26));
+
+console.log(Number.parseFloat("456"));
+console.log(parseFloat("456"));
