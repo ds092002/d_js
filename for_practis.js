@@ -192,3 +192,89 @@
 
 
 // == in JavaScript is used for comparing two variables, but it ignores the datatype of variable. === is used for comparing two variables, but this operator also checks datatype and compares two values. Checks the equality of two operands without considering their type. Compares equality of two operands with their types.
+
+
+/* MAP Method */
+
+// hold key-value pairs   EX:- "BMW",100   key :- BMW , value :- 100
+
+// let data = new Map([["BMW",100],["Audi",200],["VOLVO",300]]);
+// console.log(data);
+
+// data.set("Thar",400);
+// console.log(data);
+// console.log(data.get("VOLVO"));
+// console.log(data.set("Neno",600));
+// data.delete("Neno");
+// console.log(data);
+// console.log(data.has("Neno"));
+// console.log(data.entries());
+// console.log("Map Size : ",data.size);
+
+// let txt = "";
+// data.forEach((val , str) =>{
+//     txt = txt + str + " => " + val + "\n";
+// });
+// console.log(txt);
+
+
+/* SET Method */
+
+// set is a collection of unique value. each value can an occur once in set
+
+
+// let arr = new Set(["BMW","Volvo","Audi"]);
+// console.log(arr);
+
+// arr.add("Thar");
+// console.log(arr);
+// console.log(arr.add("Benz"));
+// arr.delete("Benz");
+// console.log(arr);
+// console.log(arr.has("Benz"));
+// // arr.clear();
+// // console.log(arr);
+// console.log(arr.entries());
+// console.log("SET Size : ",arr.size);
+
+// let txt = "";
+// arr.forEach((str) => {
+//     txt = txt + str + "\n";
+// });
+// console.log(txt);
+
+
+/* String */
+
+
+// collection of characters (array)
+
+let txt;
+// let str = "Hello World";
+// let str = 'Skill Qode'
+// console.log(str);
+// txt = 'Hello " Indian '
+// txt = 'My Name Is "Dhaval"'
+// console.log(txt);
+
+let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";    // 110
+
+// let a = data.length
+// console.log(a);
+console.log(data.length);
+
+// end position not include in slice
+// console.log(data.slice(5,12));
+// console.log(data.slice(-16,-8));
+// console.log(data.slice(-5));
+// console.log(data.slice(-7));
+
+// substring() is similar to slice().
+// console.log(data.substring(7,19));
+// console.log(data.substring(-4,5));
+// console.log(data.substring(-4,13));
+
+
+// substr() is similar to slice(). but the difference is that second perameter is specifies the length.
+// console.log(data.substr(14,5));
+// console.log(data.substr(-7,7));
