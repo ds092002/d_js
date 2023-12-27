@@ -123,13 +123,13 @@
 // let z = x;
 // console.log(z);    // 10
 // console.log(x);    // 10
-// console.log(x+=y);   // x = x + y  => 10 + 20 = 30  
-// console.log(x-=y);   // x = x - y  => 10 - 20 = -10  
-// console.log(x*=y);   // x = x * y  => 10 * 20 = 200  
-// console.log(x/=y);   // x = x / y  => 10 / 20 = 0.5  
-// console.log(y/=x);   // y = y / x  => 20 / 10 = 2  
+// console.log(x+=y);   // x = x + y  => 10 + 20 = 30
+// console.log(x-=y);   // x = x - y  => 10 - 20 = -10
+// console.log(x*=y);   // x = x * y  => 10 * 20 = 200
+// console.log(x/=y);   // x = x / y  => 10 / 20 = 0.5
+// console.log(y/=x);   // y = y / x  => 20 / 10 = 2
 // console.log(y%=x);   // y = y % x  => 20 % 10 = 2
-// console.log(x%=y);   // x = x / y  => 10 / 20 = 10  
+// console.log(x%=y);   // x = x / y  => 10 / 20 = 10
 // console.log(5**=2);     // 25
 
 
@@ -173,7 +173,7 @@
 // console.log(typeof(true));
 // console.log(typeof(10 - 5));
 // console.log(typeof(10 - "5"));
-// console.log(typeof('10' - "5"));   
+// console.log(typeof('10' - "5"));
 
 /* Conditional Statement*/
 
@@ -344,11 +344,11 @@
 // console.log(Math.trunc(7.79789));    // removing fectorial digit
 // console.log(Math.trunc(-8.23));
 
-// console.log(Math.sign(7));   // return negetive , positive , null 
+// console.log(Math.sign(7));   // return negetive , positive , null
 // console.log(Math.sign(0));
 // console.log(Math.sign(-7));
 
-// console.log(Math.pow(4,4));    // return x to the power of y 
+// console.log(Math.pow(4,4));    // return x to the power of y
 // console.log(Math.pow(10,4));
 
 // console.log(Math.sqrt(256));      // return squre root of number
@@ -389,7 +389,7 @@
 // console.log(d);
 // let d = new Date("2024-03-09 06:30 AM")
 // console.log(d);
-// let d = new Date(2024,9,2,5,18,62)    // => year,month,date,hour,min.sec  => month = 0 - 11 
+// let d = new Date(2024,9,2,5,18,62)    // => year,month,date,hour,min.sec  => month = 0 - 11
 // console.log(d);
 
 // console.log(d.toString());    //Tue Dec 26 2023 17:47:27 GMT+0530 (India Standard Time)
@@ -409,7 +409,7 @@
 // console.log(d.getSeconds());    // get seconds (0-59)
 // console.log(d.getMilliseconds()); // get millisec (0-999)
 // console.log(d.getTime());       // get Time since january 1, 1970
-// console.log(d.getTimezoneOffset()); 
+// console.log(d.getTimezoneOffset());
 
 // d.setFullYear(2023);
 // d.setMonth(2);
@@ -462,7 +462,7 @@
 // console.log(Number("143.69"));
 // console.log(Number("13,69"));
 // console.log(Number("13 69"));
-// console.log(Number("D2"));         
+// console.log(Number("D2"));
 
 // console.log(parseInt('-20'));
 // console.log(parseInt('-20.7'));
@@ -672,7 +672,7 @@
 
 // let person = {
 //     fullName : function (city){
-//         return this.firstName + " " + this.lastName + "\nCity Name is : " + city; 
+//         return this.firstName + " " + this.lastName + "\nCity Name is : " + city;
 //     },
 // };
 
@@ -908,39 +908,39 @@
 /* ==SetTimeout== */
 
 // {
-    // function greet(){
-    //     console.log('`hello world`');
-    // }
-    // greet();
-    // setTimeout(greet,5000);
-    // console.log('hu pelo avish');
+// function greet(){
+//     console.log('`hello world`');
+// }
+// greet();
+// setTimeout(greet,5000);
+// console.log('hu pelo avish');
 // }
 
 // {
-    // function greet(){
-    //     console.log('Hello World....');
-    // }
-    // greet();
-    // setTimeout(greet,3000);
-    // console.log('This Message is Shown First ');
-    // console.log('1 Today to much Rain...');
+// function greet(){
+//     console.log('Hello World....');
+// }
+// greet();
+// setTimeout(greet,3000);
+// console.log('This Message is Shown First ');
+// console.log('1 Today to much Rain...');
 // }
 
 // {
-    // function dd() {
-    //     console.log("HEloloknwdcn");
-    // }
-    // dd();
-    // setTimeout(dd,10000);
-// } 
+// function dd() {
+//     console.log("HEloloknwdcn");
+// }
+// dd();
+// setTimeout(dd,10000);
+// }
 
 // {
-    // function greet(){
-    //     console.log("Hello World!");
-    // }
-    // let intervalID = setTimeout(greet,4000);
-    // console.log('ID : ',intervalID);
-    // clearInterval(intervalID);      // clear interval function is stop settimeout function
+// function greet(){
+//     console.log("Hello World!");
+// }
+// let intervalID = setTimeout(greet,4000);
+// console.log('ID : ',intervalID);
+// clearInterval(intervalID);      // clear interval function is stop settimeout function
 // }
 
 // {
@@ -953,15 +953,147 @@
 //     showTime();
 // }
 
+// {
+//     let count = 0;
+
+//     function incres(){
+//         count += 1;
+//         console.log(count);
+//     }
+//     let id = setTimeout(incres,4000);
+//     console.log(id);
+
+//     // clearTimeout(id);
+// }
+
+// {
+//     function greet(name,lastName){
+//         console.log('Hello' + ' ' + name + ' ' + lastName);
+//     }
+
+//     setTimeout(greet,7000,'M.S','Dhoni');
+// }
+
+
+/* ==Promise== */
+
+// {
+// const count = false;
+
+// let countValue = new Promise(function (resolve, reject){
+//     if (count) {
+//         resolve('There is a count value');
+//     }else{
+//         reject('There is no count value');
+//     }
+// });
+// // console.log(countValue);
+// countValue.then((result)=>console.log(result)).catch((err)=>console.log(err));
+// }
+
+// {
+// let con = false;
+
+// let countValue = new Promise(function(resolve, reject) {
+//     if (con) {
+//         resolve('there is count')
+//     }else{
+//         reject('there is no')
+//     }
+// });
+// countValue.then((result)=>console.log(result)).catch((err)=>console.log(err));
+// }
+
+// {
+//     let countValue = new Promise(function(resolve, reject){
+//         // resolve('resolved');
+//         reject('rejected')
+//     });
+
+//     countValue
+//     .then(function successValue(result){
+//         console.log(result);
+//     })
+
+//     .then(function successfully(){
+//         console.log('this way');
+//     })
+
+//     .then(()=>{
+//         console.log("HELLO WORLD");
+//     })
+
+//     .catch((err)=>{
+//         console.log(err);
+//     })
+//     .catch((err)=>{
+//         console.log("error he ",err);
+//     });
+// }
+
+// {
+//     let countValue = new Promise((resolve, reject) => {
+//         // reject('reje');
+//         resolve('res');
+//     });
+//     countValue.then(
+//         function successValue(result) {
+//             console.log(result);
+//         },
+//     )
+//     .catch(
+//         function errorValue(result) {
+//             console.log(result);
+//         }
+//     );
+// }
+
+// {
+//     let countValue = new Promise(function (resolve, reject){
+//         resolve('resol');
+//         // reject('rej');
+//     });
+//     countValue
+//     .then(result=>console.log(result))
+//     .catch((err)=>console.log(err))
+//     .finally(
+//         function greet(){
+//             console.log('execute');
+//         }
+//     );
+// }
+
+// {
+//     function greet(n){
+//         console.log("is: ",n);
+//     }
+//     function sum(a,b,myCallback){
+//         let total = a + b;
+//         myCallback(total);
+//     }
+//     sum(3,4,greet);
+// }
+
+/* ==async\await */
+
+// {
+//     async function f() {
+//         console.log('call');
+//         return Promise.resolve(1);
+//     }
+//     f();
+// }
+
+// {
+//     async function f(){
+//         // console.log('async');
+//         return Promise.reject("reject");
+//     }
+//     f().then(function(result){
+//         console.log(result);
+//     }).catch((err)=>console.log(err));
+// }
+
 {
-    let count = 0;
-
-    function incres(){
-        count += 1;
-        console.log(count);
-    }
-    let id = setTimeout(incres,4000);
-    console.log(id);
-
-    // clearTimeout(id);
+        
 }
