@@ -486,5 +486,99 @@
 // console.log(Number.isSafeInteger(45595495954945555544145612121020202));
 // console.log(Number.isSafeInteger(45.26));
 
-console.log(Number.parseFloat("456"));
-console.log(parseFloat("456"));
+// console.log(Number.parseFloat("456"));
+// console.log(parseFloat("456"));
+
+
+
+
+/* Function */
+
+// hello();
+
+// function hello() {
+//     console.log("hello world");
+// }
+// hello();
+
+// function Add(a,b) {
+//     console.log(a+b);
+// }
+// Add(10,"D");
+
+// function Product(a,b,c) {
+//     return a * b * c;
+// }
+// // let x = Product(1,5,6);
+// // console.log(x);
+// console.log(Product(5,6,3));
+
+// let x = function (a,b) {return a * b};     // anonymous function
+// console.log(x(10,20));
+
+
+// const myFunction = function(){
+//     console.log("SkillQode-Decode Your Skill");
+// }
+// myFunction();
+
+
+// (function (a,b,c,d) {
+//     console.log("Value of : ",a+b+c+d);
+//     let e  = "Hello ! I called My self";
+//     console.log(e);
+// })(1,2,3,4);
+
+
+// let myFunction = new Function("a","b","return a * b");
+// let x = myFunction(5,5);
+// console.log(x);
+
+
+// let x = (a,b) => a * b;
+// console.log(x(7,5));
+
+
+// function myFunction(a,b) {
+//     return a * b;
+// }
+// let txt = myFunction(4,4);
+// console.log(txt);
+
+// function myFunction(a,b){
+//     return a - b;
+// }
+// let t = myFunction.toString();
+// console.log(t(30,20));
+// function myFunction(a,b){
+//     return a * b;
+// }
+// let text = myFunction(45,56);
+// console.log(text.toString());
+// function myFunction(a,b) {
+//     return arguments.length;
+// }
+// let t = myFunction;
+// console.log(t(4,5));
+
+
+// function sum(...array) {
+//     let sum = 0;
+//     for (let index = 0; index < array.length; index++) {
+//         sum+=array[index];
+//     }
+//     return sum;
+// }
+// let x = sum(1,2,3,4,5,6,7);
+// console.log(x);
+
+
+function sumAll(){
+    let sum = 0;
+    for (let index = 0; index < arguments.length; index++) {
+        sum += arguments[index];
+    }
+    return sum;
+}
+x = sumAll(1,123,500,115,44,88);
+console.log(x);
