@@ -52,7 +52,7 @@
 // }
 // console.log(x);  // 10
 
- 
+
 /* Hoisting */
 
 // console.log(a);
@@ -573,12 +573,395 @@
 // console.log(x);
 
 
-function sumAll(){
-    let sum = 0;
-    for (let index = 0; index < arguments.length; index++) {
-        sum += arguments[index];
+// function sumAll(){
+//     let sum = 0;
+//     for (let index = 0; index < arguments.length; index++) {
+//         sum += arguments[index];
+//     }
+//     return sum;
+// }
+// x = sumAll(1,123,500,115,44,88);
+// console.log(x.toString());
+
+// for (var index = 1; index <= 5; index++) {
+//     setTimeout(function(){
+//         console.log(index);
+//     },100);
+// }
+
+
+// const prodcut = function (a,b,c) {
+//     return a + b + c;
+// }
+// let a = prodcut(1,2,3);
+// console.log(a);
+
+// let a = new Function("x","console.log(x)");
+// let a = new Function("x","y","z","console.log(x+y+z)");
+// a(10,20,30);
+
+
+// (function(a,b,c,d,e){
+//     console.log(a+b+c+d+e);
+//     console.log("I Invoking my self");
+// })(10,20,30,40,50);
+
+// let product = (a,b,c) =>{
+//     return a * b * c;
+// }
+// console.log(product(10,20,30));
+
+// function myObject(){
+//     return arguments;
+// }
+// let s = myObject(1,2,3,4);
+// console.log(s);
+
+// function myObject(){
+//     return arguments.length;
+// }
+// let s = myObject(1,2,3,4,5,6,7,8,9);
+// console.log(s.toString());
+
+// function sum(){
+//     let sum = 0;
+//     for(let i = 0 ; i< arguments.length; i++)
+//     sum += arguments[i];
+// return sum;
+// }
+// let s = sum(1,2,3,4,5,6);
+// console.log(s);
+
+// function* hello(a,b){
+//     yield a+b;
+//     yield a-b;
+//     yield a*b;
+//     yield a*b;
+//     return a/ b;
+// }
+// let a = hello(10,5);
+// console.log(a.next().value);
+// console.log(a.next().value);
+// console.log(a.next().value);
+// console.log(a.next().value);
+// console.log(a.next().value);
+
+
+// let person = {
+//     firstName : "Dhaval",
+//     lastName : "Solanki",
+//     age : 21,
+//     fullName : function () {
+//         return this.firstName + " " + this.lastName + "\nage is : " + this.age;
+//     }
+// }
+// console.log(person.fullName().toUpperCase());
+
+
+// let person = {
+//     fullName : function (city) {
+//         return this.firstName + " " + this.lastName + "\nCity Name is : " + city;
+//     },
+// };
+
+// let data = {
+//     firstName : "M.S.",
+//     lastName : "Dhoni",
+// };
+// console.log(person.fullName.call(data,"Ranchi"));
+
+// let person = {
+//     fullName : function (city){
+//         return this.firstName + " " + this.lastName + "\nCity Name is : " + city; 
+//     },
+// };
+
+// let data = {
+//     firstName : "M.S.",
+//     lastName : "Dhoni",
+// };
+
+// console.log(person.fullName.apply(data,["Ranchi"]));
+
+
+// let person = {
+//     firstName : "Skill",
+//     lastName : "Qode",
+//     fullName : function(city){
+//         return this.firstName + " " + this.lastName + "\nCity Name is : " + city;
+//     },
+// };
+
+// let data = {
+//     firstName : "M.S.",
+//     lastName : "Dhoni",
+// };
+
+// console.log(person.fullName("Surat"));
+// let a = person.fullName.bind(data,"Ranchi")();
+// console.log(a);
+
+
+
+/* == Array == */
+
+// let data = [11,22,33,44,55];
+// console.log(data);
+// console.log(data.length);
+
+// data.push(66);
+// data.push(77);
+// data.push(88);
+// console.log(data);
+// console.log(data.length);
+
+// data.pop();
+// console.log(data);
+// console.log(data.length);
+
+// // data.shift();
+// // console.log(data);
+// // console.log(data.length);
+
+// // data.push(88);
+// // data.unshift();
+// // console.log(data);
+// // console.log(data.length);
+
+// data[0] = 11;
+// console.log(data);
+// console.log(data.length);
+
+// let data1 = [99,100,110,120];
+// let a = data.concat(data1);
+// console.log(a);
+// console.log(a.length);
+
+// a.splice(1,0,22)
+// console.log(a);
+// console.log(a.length);
+
+// // a.slice(2,1);
+// // console.log(a);
+// console.log(data.slice(1,6));
+
+// let b = ["Watermelon","Kiwi","Orange","Mango","Apple","Banana"];
+// // console.log(b.sort());
+// let ar = [56,98,32,1,78,9,7,60,43,25,11,15];
+// // console.log(ar.sort((a,b) => a - b));
+// console.log(b.sort());
+// console.log(b.reverse());
+
+// console.log(ar.sort((a,b) => a - b));
+// console.log(ar.reverse());
+
+// MaxNum = (a) =>{
+//     return Math.max.apply(null,a);
+// };
+// console.log(MaxNum(ar));
+
+// Minnum = (a) => {
+//     return Math.min.apply(null,a);
+// };
+// console.log(Minnum(ar));
+
+
+// let s = "";
+// data.forEach((val,ind)=>{
+//     s = s + " " + val;
+// })
+// console.log(s);
+
+
+// // let dd = [];
+// // dd = data.map((val,ind) =>{
+// //     return val * 2;
+// // })
+// // console.log(dd);
+
+// let dd = [];
+// dd = data.filter((val,ind)=>{
+//     // return val >= 50;
+//     return val <= 50;
+// })
+// console.log(dd);
+
+// let abc;
+// abc = data.reduce((a,val,index)=>{
+//     return a + val;
+// })
+// console.log(abc);
+
+// let abc;
+// abc = data.reduceRight((a,val, index)=>{
+//     return a + val;
+// })
+// console.log(abc);
+
+// let abc ;
+// abc = data.every((val,index) => {
+//     return val <= 88;
+// })
+// console.log(abc);.
+
+// let abc ;
+// abc = data.some((val,ind)=>{
+//     return val < 5;
+// })
+// console.log(abc);
+
+// let abc = data.find((val,ind)=>{
+//     return val >= 25;
+// })
+// console.log(abc);
+
+// let abc = data.findIndex((val,ind)=>{
+//     return val > 55;
+// })
+// console.log(abc);
+
+// let abc = data.entries();
+// console.log(abc.next().value);
+// console.log(abc.next().value);
+// console.log(abc.next().value);
+// console.log(abc.next().value);
+// console.log(abc.next().value);
+// console.log(abc.next().value);
+// console.log(abc.next().value);
+
+
+// let abc = data.includes(22);
+// console.log(abc);
+
+// let abc = [11,22,33,44,55,66,77,88]
+// console.log(abc.copyWithin(0,3,6));
+// console.log(abc.copyWithin(2,4,7));
+
+
+/* ==Object== */
+
+
+// let person = {
+//     age : 21,
+//     greet : function (){
+//         return ("Hello Good Evevning");
+//     }
+// };
+// person.name = "Dhaval";
+// person.nationaltiy = 'Indian';
+// console.log(person.age);
+// console.log(person.greet());
+// console.log(person);
+
+// delete person.age;
+// console.log(person);
+
+// console.log(person.name);
+// console.log(person["greet"]());
+
+
+// let person = {
+//     name : 'priya',
+//     age : 20,
+//     marks : {
+//         ba : 21,
+//         eco : 11,
+//         eng : 10
+//     },
+//     hobbies : ["Cheating","Reading","Writing"]
+// };
+
+// console.log(person);
+// console.log(person.marks);
+// console.log(person.marks.ba);
+// console.log(person.hobbies);
+
+
+
+/* ==Class== */
+
+// class Person{
+//     constructor(name,city){
+//         this.name = name;
+//         this.city = city;
+//     }greet(){
+//         return ("Hello I am " + " " + this.name + "\nLives In : " + this.city);
+//     }
+// }
+
+// let priya = new Person("priya","hell");
+// console.log(priya.greet());
+
+// class person {
+//     constructor(name,city){
+//         this.name = name;
+//         this.city = city;
+//     }greet(){
+//         return ("Hello " + " " + this.name + "\nLives In  : " + this.city);
+//     }
+// }
+// let d = new person("Priya","Cheter")
+// console.log(d.greet());
+
+
+
+/* ==SetTimeout== */
+
+// {
+    // function greet(){
+    //     console.log('`hello world`');
+    // }
+    // greet();
+    // setTimeout(greet,5000);
+    // console.log('hu pelo avish');
+// }
+
+// {
+    // function greet(){
+    //     console.log('Hello World....');
+    // }
+    // greet();
+    // setTimeout(greet,3000);
+    // console.log('This Message is Shown First ');
+    // console.log('1 Today to much Rain...');
+// }
+
+// {
+    // function dd() {
+    //     console.log("HEloloknwdcn");
+    // }
+    // dd();
+    // setTimeout(dd,10000);
+// } 
+
+// {
+    // function greet(){
+    //     console.log("Hello World!");
+    // }
+    // let intervalID = setTimeout(greet,4000);
+    // console.log('ID : ',intervalID);
+    // clearInterval(intervalID);      // clear interval function is stop settimeout function
+// }
+
+// {
+//     function showTime(){
+//         let dataTime = new Date();
+//         let time = dataTime.toLocaleTimeString();
+//         console.log(time);
+//         setTimeout(showTime,3000);
+//     }
+//     showTime();
+// }
+
+{
+    let count = 0;
+
+    function incres(){
+        count += 1;
+        console.log(count);
     }
-    return sum;
+    let id = setTimeout(incres,4000);
+    console.log(id);
+
+    // clearTimeout(id);
 }
-x = sumAll(1,123,500,115,44,88);
-console.log(x);
