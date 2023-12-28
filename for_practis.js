@@ -1094,6 +1094,128 @@
 //     }).catch((err)=>console.log(err));
 // }
 
+// {
+//     let promise = new Promise(function (resolve,reject){
+//         setTimeout(function(){
+//             resolve("resolve")},4000);
+//     });
+
+//     async function asyncFunc(){
+//         // let result = promise;
+//         let result = await promise;
+
+//         console.log(result);
+//         console.log("Hello");
+//     }
+//     asyncFunc();
+// }
+
+// {
+//     let promise1 = new Promise(function(resolve , reject){
+//         setTimeout(function(){
+//             resolve('1 resolved')
+//         },2000);
+//     });
+//     let promise2 = new Promise(function(resolve , reject){
+//         setTimeout(function(){
+//             resolve('2 resolved')
+//         },3000);
+//     });
+//     let promise3 = new Promise(function(resolve , reject){
+//         setTimeout(function(){
+//             resolve('3 resolved')
+//         },4000);
+//     });
+
+//     async function asyncFunc(){
+//         let result1 = await promise1;
+//         console.log(result1);
+//         let result2 = await promise2;
+//         console.log(result2);
+//         let result3 = await promise3;
+//         console.log(result3);
+//     }
+//     asyncFunc();
+// }
+
+
+
+/* ==try...catch...finally== */
+
+// {
+//     const numerator = 100 , denominator = 20;
+//     try {
+//         console.log(numerator/denominator);
+//         console.log(a);
+//         console.log('hello');
+//     } catch (error) {
+//         console.log('error caught');        
+//         console.log('error message : ' + error);        
+//     }   
+// }
+
+// {
+//     const numerator = 100 , denominator = 20;
+//     try {
+//         console.log(numerator/denominator);
+//         console.log(a);
+//     } catch (error) {
+//         console.log('error caught');
+//         console.log('error ' + error);
+//     }
+//     finally{
+//         console.log('every time');
+//     }
+// }
+
+// {
+//     const number = 10;
+//     try {
+//         if (number < 50) {
+//             console.log('Success');
+//         }else{
+//             throw new Error('The Number is low')
+//         }
+//         console.log('hello');
+//     } catch (error) {
+//         console.log('error');
+//         console.log('error : ' + error);
+//     }
+// }
+
+
+
+/* ==use strict== */
+
+'use strict';
+// {
+//     console.log('some code');
+
+//     // 'use strict';
+//     x = 21;
+//     console.log(x);
+
+// }
+
+// {
+//     myVariable = 9;
+//     console.log(myVariable);
+
+//     function hello() {
+//         // 'use strict';
+
+//         let string = "hello";
+//     }
+//     hello();
+// }
+
+// {
+//     function hello(p1,p1){console.log('hello');}
+//     hello();
+// }
+
 {
+    function low(){
         
+    }
 }
