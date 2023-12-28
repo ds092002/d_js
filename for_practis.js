@@ -1214,8 +1214,345 @@
 //     hello();
 // }
 
-{
-    function low(){
-        
+// console.log(null==null);
+// let a ;
+// console.log(null);
+
+// const myFalse = new Boolean(false); // initial value of 
+// console.log(myFalse);
+// const g = Boolean(myFalse); // initial value of true
+// console.log(g);
+// const myString = new String("Hello"); // string object
+// console.log(myString);
+// const s = Boolean(myString); // initial value of true
+
+// let b ;
+// b = 10*"s";
+// console.log(b);
+// console.log(NaN === NaN);
+
+// let myArr = [
+//     {
+//         studenName: "jack",
+//         studenClass: 6,
+//         studenSection: "a"
+//     },
+//     {
+//         studenName: "tom",
+//         studenClass: 6,
+//         studenSection: "a"
+//     },
+//     {
+//         studenName: "dhaval",
+//         studenClass: 'MERN-STACK',
+//         studenSection: "APP_lab"
+//     }
+// ];
+// let a = myArr[1];
+// console.log(myArr[2], myArr[2]);
+// console.log(myArr[0]);
+// console.log(a);
+
+//Adding add method into the Array Object using Array.prototype property
+// let myArr = [1,2,3,4];
+
+// Array.prototype.add = function() {
+//     let result = 0;
+
+//     for(let i = 0; i < this.length; i++) {
+//     	result += this[i];
+//     }
+//     return result;
+// }
+
+// console.log(myArr.add());
+
+// let a = [["BMW",100],["AUDI",200],["THAR",300]];
+// console.log(a);
+
+// let dd = new Date;
+// // console.log(dd);
+// console.log(dd.getTime());
+
+
+// let a = prompt("Enter : ")
+
+// let r = alph_str(a)
+// console.log(r);
+
+
+// function alph_str(string) {
+//     return string.split('').sort().join('');
+// }
+
+// let a = prompt("enter")
+
+// let r = alph_str(a)
+// console.log(r);
+
+// function alph_str(string) {
+//     let w = string.split('');
+//     let r = '';
+
+//     for (let i = 0; i < w.length; i++) {
+//         if (w[i].length > r.length) {
+//             r = w[i];
+//         }
+//     }
+//     return r;
+// }
+// let a = prompt("enter: ");
+// let r = n(a);
+// console.log("defvkjbh",r);
+
+// function n(str){
+//     let word = str.split(' ');
+//     let result = ' ';
+//     for(let i = 0 ; i < word.length; i++){
+//         if (word[i].length > result.length) {
+//             result = word[i]
+//         }
+//     }
+//     return result;
+// }
+
+// let alph = prompt("Enter Alphabetic String: ");
+
+// let r = longest_word(alph);
+// console.log("Longest Word in This line is: ", r);
+
+// function longest_word(str) {
+//     let words = str.split(' ');
+//     let result = '';
+
+//     for (let i = 0; i < words.length; i++) {
+//         if (words[i].length > result.length) {
+//             result = words[i];
+//         }
+//     }
+//     return result;
+// }
+
+// let a = prompt("enter");
+// let r = alph_str(a);
+
+// console.log(r);
+// function alph_str(string){
+//     return string.split('').sort().join('');
+// }
+
+
+
+// let a = prompt("enter");
+// let r = alph_str(a);
+// console.log("word",r);
+
+// function alph_str(params) {
+//     let word = params.split('');
+//     let result = '';
+
+//     for(let i = 0 ; i < word.length ; i++ ){
+//         if (word[i].length > result.length) {
+//             result = word[i];
+//         }
+//     }
+//     return result;
+// }
+
+
+// let num = Number(prompt("enter"));
+
+// if(a(num)){
+//     console.log('perfect');
+// }else{
+//     console.log("not");
+// }
+
+// function a(n) {
+//     let s = 0;
+//     for(let i = 0 ; i<= n/2; i++){
+//         if (n % i == 0) {
+//             s += i;
+//         }
+//     }
+//     if (s == n) {
+//         return 1;
+//     } else {
+//         return 0;        
+//     }
+// }
+
+// const n = Number(prompt("entewr : "));
+// if (a(n)) {
+//     console.log("yes");
+// } else {
+//     console.log("no");
+// }
+
+// function a(n) {
+//     let sum = 0;
+//     for(let i = 0;i<=n/2;i++){
+//         if (n%i==0) {
+//             sum += i;
+//         }
+//     }
+//     if (sum == n) {
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// }
+
+// let num = Number(prompt("enter"));
+
+// if (a(num)) {
+//     console.log("yes");
+// } else {
+//     console.log("no");
+// }
+
+// function a(n){
+//     let s = 0 ;
+//     for(let i = 0 ;i <= n/2;i++){
+//         if (n% i == 0) {
+//             s += i;
+//         }
+//     }
+//     if (s == n) {
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// }
+
+// let num = Number(prompt("ENter"));
+
+// let r = a(num);
+// console.log(num);
+// console.log(r);
+
+// function a(n){
+//     let s = 0 ;
+//     while (n != 0) {
+//         s = s * 10 + n%10;
+//         n = Math.floor(n/10);
+//     }
+//     return s;
+// }
+
+// let num = Number(prompt("Enter : "));
+// let r = nuM(num);
+// console.log("ff",r);
+
+// function nuM(n) {
+//     let s = 0;
+//     while (n!=0) {
+//         s = s * 10 + n%10;
+//         n = Math.floor(n/10);
+//     }
+//     return s;
+// }
+
+// let num = Number(prompt("ENtyer"));
+// let r = a(num);
+
+// console.log(num);
+// console.log(r);
+// function a(n) {
+//     let s =0 ;
+//     while (n!=0) {
+//         s = s * 10 + n%10;
+//         n =Math.floor(n/10);
+//     }
+//     return s;
+// }
+
+
+// let a = prompt("ENter");
+
+// let r = upperCase(a);
+// console.log(r);
+
+// function upperCase(str) {
+//     let word = str.split(' ');
+//     let result = [];
+
+//     for(let i = 0; i < word.length; i++){
+//         let words = word[i];
+//         let a = words.charAt(0).toUpperCase() + words.slice(1);
+//         result.push(a);
+//     }
+//     return result.join('');
+// }
+
+
+let pro = prompt("vnf: ");
+
+let r = ing(pro);
+console.log("scvf: ", r);
+
+function ing(str) {
+    let word = str.split(' ');
+    let result = [];
+
+    for (let i = 0; i < word.length; i++) {
+        let words = word[i];
+        let a = words.charAt(0).toUpperCase() + words.slice(1);
+        result.push(a);
     }
+    return result.join(' ');
 }
+
+
+
+
+
+// let alph = prompt("String : ");
+
+// let r = upperCase(alph);
+// console.log("string : ", r);
+
+// function upperCase(str) {
+//     let words = str.split(' ');
+//     let result = [];
+//     for (let i = 0; i < words.length; i++) {
+//         let word = words[i];
+//         let a = word.charAt(0).toUpperCase() + word.slice(1);
+//         result.push(a);
+//     }
+//     return result.join(' ');
+// }
+
+// let alph = prompt("String : ");
+
+// let r = upperCase(alph);
+// console.log("string : ", r);
+
+// function upperCase(str) {
+//     let words = str.split(' ');
+//     let result = [];
+//     for (let i = 0; i < words.length; i++) {
+//         let word = words[i];
+//         let a = word.charAt(0).toUpperCase() + word.slice(1);
+//         result.push(a);
+//     }
+//     return result.join(' ');
+// }
+
+
+// console.log(0.1 === 100);
+
+// let alph = prompt("String:");
+// let r = upperCase(alph);
+// console.log("str",r);
+
+// function upperCase(str){
+//     let word = str.split(' ');
+//     let result = [];
+//     for(let i = 0; i < word.length; i++){
+//         let words = word[i];
+//         let a = words.charAt(0).toUpperCase() + words.slice(1);
+//         result.push(a);
+//     }
+//     return result.join(' ');
+// }

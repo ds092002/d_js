@@ -41,7 +41,7 @@
 
 
 //====|slice|==== 
-// console.log(data.slice(2,1));
+// console.log(data.slice(2,3));
 
 
 //====|sort|==== 
