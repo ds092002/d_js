@@ -1,10 +1,10 @@
-let currentDisplay ="0";
-let resultDisplay =false;
+let currentDisplay = "0";
+let resultDisplay = false;
 
-function appendToDisplay(value){
+function appendToDisplay(value) {
     if (currentDisplay === "0" || resultDisplay) {
         currentDisplay = value;
-    }else{
+    } else {
         currentDisplay += value;
     }
     resultDisplay = false;
@@ -16,9 +16,9 @@ function updateDisplay() {
     displayElement.textContent = currentDisplay;
 }
 
-function calculaterResult() {
+function calculateResult() {
     try {
-        const result = eval(currentDisplay);
+        let result = eval(currentDisplay); // Declare the 'result' variable
         currentDisplay += "\n" + result.toString();
         updateDisplay();
     } catch (error) {
@@ -28,18 +28,20 @@ function calculaterResult() {
     resultDisplay = true;
 }
 
+
 function clearLastElement() {
-    currentDisplay = currentDisplay.slice(0,-1);
-    if (currentDisplay === " ") {
+    currentDisplay = currentDisplay.slice(0, -1);
+    if (currentDisplay.trim() === "") {
         currentDisplay = "0";
     }
     updateDisplay();
 }
+
 
 function clearDisplay() {
     currentDisplay = "0";
     updateDisplay();
 }
 
-window.addEventListener("resize",handleOverflow);
+window.addEventListener("resize", handleOverflow);
 handleOverflow();
