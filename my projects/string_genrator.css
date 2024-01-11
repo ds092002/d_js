@@ -17,7 +17,7 @@ h1{
     color :rgb(236, 252, 10);
 }
 p{
-    color :whitesmoke;
+    color :black;
 }
 h{
     color: rgb(60, 220, 20);
@@ -81,3 +81,8 @@ h{
     transform: translateY(0%);
     box-shadow: 0 0;
   }
+  #output {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f5f5f5;
+}

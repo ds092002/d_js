@@ -166,6 +166,7 @@
 // console.log(null==NaN);   // false
 // console.log(null==undefined);   // true
 // console.log(null===undefined);   // true
+// console.log(NaN===NaN);
 
 
 // console.log(typeof(10));
@@ -257,7 +258,7 @@
 // txt = 'My Name Is "Dhaval"'
 // console.log(txt);
 
-// let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";    // 110
+let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";    // 110
 
 // let a = data.length
 // console.log(a);
@@ -573,21 +574,22 @@
 // console.log(x);
 
 
-// function sumAll(){
-//     let sum = 0;
-//     for (let index = 0; index < arguments.length; index++) {
-//         sum += arguments[index];
-//     }
-//     return sum;
-// }
-// x = sumAll(1,123,500,115,44,88);
-// console.log(x.toString());
+    // function sumAll(){
+    //     let sum = 0;
+    //     for (let index = 0; index < arguments.length; index++) {
+    //         sum += arguments[index];
+    //     }
+    //     // console.log(sum);
+    //     return sum;
+    // }
+    // x = sumAll(1,123,500,115,44,88);
+    // console.log(x.toString());
 
-// for (var index = 1; index <= 5; index++) {
-//     setTimeout(function(){
-//         console.log(index);
-//     },100);
-// }
+    // for (var index = 1; index <= 5; index++) {
+    //     setTimeout(function(){
+    //         console.log(index);
+    //     },100);
+    // }
 
 
 // const prodcut = function (a,b,c) {
@@ -765,7 +767,12 @@
 // };
 // console.log(Minnum(ar));
 
-
+// const numbers = [45, 4, 9, 16, 25];
+// const sum = numbers.reduce(myFunction);
+// function myFunction(total, value, index, array) {
+// return total + value;
+// }
+// console.log(sum);
 // let s = "";
 // data.forEach((val,ind)=>{
 //     s = s + " " + val;
@@ -1486,22 +1493,22 @@
 // }
 
 
-let pro = prompt("vnf: ");
+// let pro = prompt("vnf: ");
 
-let r = ing(pro);
-console.log("scvf: ", r);
+// let r = ing(pro);
+// console.log("scvf: ", r);
 
-function ing(str) {
-    let word = str.split(' ');
-    let result = [];
+// function ing(str) {
+//     let word = str.split(' ');
+//     let result = [];
 
-    for (let i = 0; i < word.length; i++) {
-        let words = word[i];
-        let a = words.charAt(0).toUpperCase() + words.slice(1);
-        result.push(a);
-    }
-    return result.join(' ');
-}
+//     for (let i = 0; i < word.length; i++) {
+//         let words = word[i];
+//         let a = words.charAt(0).toUpperCase() + words.slice(1);
+//         result.push(a);
+//     }
+//     return result.join(' ');
+// }
 
 
 
@@ -1556,3 +1563,52 @@ function ing(str) {
 //     }
 //     return result.join(' ');
 // }
+
+
+
+// let n = 24;
+// let l = 0, r = 100, ans = n;
+// console.log(ans);
+// while(l <= r) {
+//    let mid = Math.floor((l + r) / 2);
+//    console.log(mid);
+//    if(mid * mid <= n) {
+//     console.log(mid);
+//        ans = mid;
+//        l = mid + 1;
+//        console.log("a",ans);
+//    }
+//    else {
+//        r = mid - 1;
+//     //    console.log("r",r);
+//    }
+// }
+// console.log(ans);
+
+let a = [1, 2, 3, 4, 5, 6];
+var left = 0, right = 5;
+var found = false;
+var target = 5;
+while (left <= right) {
+    var mid = Math.floor((left + right) / 2);
+    if (a[mid] == target) {
+        found = true;
+        break;
+    }
+    else if (a[mid] < target) {
+        left = mid + 1;
+    }
+    else {
+        right = mid - 1;
+    }
+}
+if (found) {
+    console.log("`sdfv`YES");
+}
+else {
+    console.log("NO");
+}
+
+
+
+
