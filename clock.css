@@ -3,11 +3,11 @@
     width: 900px;
     margin: 200px;
     text-align: center;
-    border: 2px solid black;
+    border: 5px solid black;
     border-radius: 20px;
 }
 h{
-    color: rgb(255, 255, 0);
+    color: rgb(4, 0, 255);
 }
 .center {
     position: absolute;
@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(19, 81, 226);
+    background : linear-gradient(to right,rgb(255, 255, 96),skyblue);
   }
 
   .face {
