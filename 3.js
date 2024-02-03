@@ -74,7 +74,7 @@
 // console.log("Obtain Marks :"+marks);
 // console.log("Perchantage : "+per);
 
-// if (marks < 33) {
+// if (marks > 33) {
 //     console.log("Student Pass");
 // }
 // else {
@@ -267,7 +267,7 @@
 // let x = Number(prompt("Enter x : "));
 // let txt = " ";
 // for (let i = 1; i <= x; i++){
-//     txt = txt + i + " ";
+//     txt = txt + i + " , ";
 // }
 // console.log(txt);
     

@@ -7,7 +7,7 @@
 // data.set("Mustang",500);
 
 // console.log(data);
-
+// console.log(null <= 0);
 // console.log(data.size);
 // data.clear();
 // data.delete("BMW");
