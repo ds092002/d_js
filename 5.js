@@ -27,6 +27,11 @@
 // let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";
 
 // console.log(data.length)
+// console.log(data.slice(11,13))
+// console.log(data.slice(-8,-5))
+// console.log(data.substring(11,13));
+// console.log(data.substring(-8,-5));
+
 
 // console.log(data.slice(12,56));          // s the world's most popular programming langu
 // console.log(data.slice(20));          // string to rest of all string
@@ -49,7 +54,7 @@
 
 // console.log(data.concat("Hello" , "\n Skill Qode"));
 
-let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";
+// let data = "JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.";
 
 // console.log(data.replace("JavaScript" , "Moye Moye "))
 // console.log(data.replace(/javaScript/i , "Moye Moye "))
@@ -74,7 +79,6 @@ let data = "JavaScript is the world's most popular programming language.JavaScri
 // console.log(txt.padStart(8,"XXX"));
 
 // let txt = "1234";
-// console.log(txt.padEnd(8,"*"));
+// console.log(txt.padStart(12,"*"));
 // console.log(txt.padEnd(8,"*").concat(9));
-
-console.log(data.split(" "));
+// console.log(data.split(" "));

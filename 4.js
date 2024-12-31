@@ -1,6 +1,21 @@
 /*======= Map Method =======*/
 
 // let data = new Map([["BMW",100] , ["Audi",200]  , ["Toyoto",300]]);
+let d = new Map([['B',1],['C',2],['D',3]]);
+console.log(d); // 100
+d.set('E',4)
+console.log(d); // 100
+// d.clear()
+// d.delete('E')
+console.log(d.entries()); // 100
+console.log(d.has('A')); // 100
+console.log(d.get('D')); // 100
+console.log(d.keys('D')); // 100
+console.log(d.values('D')); // 100
+let t = "";
+d.forEach((val, st) => t = t + st + " => " + val + "\n")
+console.log(t);
+console.log(d.size)
 
 
 // data.set("Thar",400);

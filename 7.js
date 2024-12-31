@@ -9,7 +9,7 @@ let d = new Date();
 // let d = new Date(2024,4,23,7,17,77);
 // console.log(d); 
 
-// console.log(d.toString());
+// console.log(d.toString());    
 // console.log(d.toDateString());
 // console.log(d.toISOString());
 // console.log(d.toUTCString());
@@ -35,5 +35,29 @@ let d = new Date();
 // d.setMinutes(17);
 // d.setSeconds(47);
 // d.setMilliseconds(47);
-d.setTime(259464665200);
-console.log(d);
+// d.setTime(259464665200);
+// console.log(d);
+
+
+
+// Pattern
+let i, j , k;
+
+for(i=0;i<=5;i++){
+    for(k=5;k>i;k--){
+        process.stdout.write(" ");
+    }
+    for(j=0;j<i;j++){
+        process.stdout.write(" *");
+    }
+    console.log("")
+}
+for(i=4;i>0;i--){
+    for(k=4;k>=i;k--){
+        process.stdout.write(" ");
+    }
+    for(j=i;j>0;j--){
+        process.stdout.write(" *");
+    }
+    console.log("")
+}

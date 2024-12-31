@@ -5,14 +5,20 @@
 // alert("Hello One!!!!");
 
 // HTML DOM method
-// document.getElementById("test").innerHTML = "Good Morning....."
+document.getElementById("test").innerHTML = "Good Morning....."
 
 // variable -> var , let , const
 // Data type -> number , string ,boolean , null , object , undefined
+// Data type have two type: 1) Primitive data type
+//                          2) Non-primitive data type
 
-// var a;
-// var a=7;
-// console.log("value of is : ",a);
+//  1) Primitive data type: Number, String, Boolean, NULL, Undefined and Symbol 
+//  2) Non-Primitive data type: Array and Object
+
+var a ;
+console.log("value of a is : ",a);
+var a=7;
+console.log("value of a is : ",a);
 
 // a = "Hello..";
 // console.log(a);
