@@ -77,3 +77,68 @@ function stopWatch() {
 	} 
 }
  
+let lapList = document.getElementById('lapList');
+let timer = false;
+
+startBtn.addEventListener('click', function () { 
+    timer = true; 
+    stopWatch(); 
+}); 
+
+stopBtn.addEventListener('click', function () { 
+    timer = false; 
+}); 
+
+resetBtn.addEventListener('click', function () { 
+    timer = false; 
+    hour = 0; 
+    minute = 0; 
+    second = 0; 
+    count = 0; 
+    lapList.innerHTML = ''; // Clear laps
+    updateDisplay();
+}); 
+
+lapBtn.addEventListener('click', function () {
+    if (timer) {
+        let lapTime = `${formatTime(hour)}:${formatTime(minute)}:${formatTime(second)}:${formatTime(count)}`;
+        let li = document.createElement('li');
+        li.textContent = lapTime;
+        lapList.appendChild(li);
+    }
+});
+
+function formatTime(unit) {
+    return unit < 10 ? "0" + unit : unit;
+}
+
+function updateDisplay() {
+    document.getElementById('hr').innerHTML = formatTime(hour); 
+    document.getElementById('min').innerHTML = formatTime(minute); 
+    document.getElementById('sec').innerHTML = formatTime(second); 
+    document.getElementById('count').innerHTML = formatTime(count); 
+}
+
+function stopWatch() { 
+    if (timer) { 
+        count++; 
+
+        if (count == 100) { 
+            second++; 
+            count = 0; 
+        } 
+
+        if (second == 60) { 
+            minute++; 
+            second = 0; 
+        } 
+
+        if (minute == 60) { 
+            hour++; 
+            minute = 0; 
+        } 
+
+        updateDisplay();
+        setTimeout(stopWatch, 10); 
+    } 
+}

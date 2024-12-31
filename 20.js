@@ -31,25 +31,25 @@
 // JavaScript getElementById
 
 {
-    // function findElement() {
-    //     const element = document.getElementById("test");
-    //     element.innerHTML = "Element found!.....";
+    function findElement() {
+        const element = document.getElementById("test");
+        element.innerHTML = "Element found!.....";
 
-    //     // document.getElementById("id2").innerHTML = "Hello World.....!"
-    // }      
+        // document.getElementById("id2").innerHTML = "Hello World.....!"
+    }      
     
-    // findElement();
-    // const node1 = document.getElementById("id2");
-    // const node2 = document.getElementById("id3");
-    //     function textNode1() {
-    //         alert(node1.innerHTML);
-    //     }
-    //     function textNode2() {
-    //         alert(node2.innerHTML);
-    //     }
+    findElement();
+    const node1 = document.getElementById("id2");
+    const node2 = document.getElementById("id3");
+        function textNode1() {
+            alert(node1.innerHTML);
+        }
+        function textNode2() {
+            alert(node2.innerHTML);
+        }
 }
 
-//getElementsByTagName()
+getElementsByTagName()
 
 {
     // const elements = document.getElementsByTagName("p");

@@ -2,6 +2,7 @@ let output = document.getElementById('output');
 
 function stringGenerator(alpha) {
     let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    
     let str = '';
 
     for (let i = 1; i <= alpha; i++) {
