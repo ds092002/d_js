@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "libphonenumber-js": "^1.11.9"
+  }
+}
