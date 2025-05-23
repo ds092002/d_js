@@ -1,3 +1,6 @@
+https://github.com/shubhdhungana/mern-interview-sets-pdf/blob/main/2.0%20JS%20Interview%20Questions.pdf
+
+
 
 ### **Basics of Node.js**
 1. **What is Node.js?**  
@@ -53,7 +56,7 @@
 
 ### **File System and Streams**
 11. **How do you read a file in Node.js?**  
-    Using the `fs` module:  
+    Using the `fs` module:    
     ```javascript
     const fs = require('fs');
     fs.readFile('file.txt', 'utf8', (err, data) => {
@@ -69,7 +72,7 @@
     - **Duplex:** For both reading and writing.  
     - **Transform:** For modifying data while reading/writing.
 
----
+0---
 
 ### **Middleware and Frameworks**
 13. **What is middleware in Node.js?**  
@@ -94,7 +97,7 @@
 
 17. **How do you handle errors in Node.js?**  
     By using try-catch blocks, middleware, or the `error` event:  
-    ```javascript
+    ```javascriptc
     app.use((err, req, res, next) => {
         console.error(err.stack);
         res.status(500).send('Something went wrong!');
@@ -127,12 +130,795 @@
     ```
 
 ---
-
 ### **Advanced Topics**
 21. **What is clustering in Node.js?**  
     Clustering allows Node.js to utilize multiple cores of a processor, creating child processes to handle multiple requests concurrently.
 
-22. **What are child processes in Node.js?**
+----
+
+## Node.js Interview Q&A
+
+### Basic Level
+
+**1. What is Node.js?**  
+Node.js is an open-source, cross-platform JavaScript runtime built on Chrome's V8 engine. It allows developers to run JavaScript on the server side to build scalable network applications.
+
+**2. What are the key features of Node.js?**  
+- Event-driven and asynchronous
+- Fast execution due to the V8 engine
+- Single-threaded but handles concurrency using the event loop
+- No buffering — outputs data in chunks
+- Cross-platform
+
+**3. What is the difference between synchronous and asynchronous code in Node.js?**
+- **Synchronous**: Code is executed line-by-line, blocking the next line until the current line completes.  
+- **Asynchronous**: Code doesn't wait and can execute other tasks while waiting for operations like I/O to complete (using callbacks, promises, or async/await).
+Example:
+
+// Synchronous````````````````````
+console.log("Start");
+console.log("End");
+
+// Asynchronous
+setTimeout(() => {
+  console.log("End after timeout");
+}, 1000);
+console.log("Start");
+
+**4. What is the role of the package.json file?**  
+It holds metadata about the project and manages dependencies, scripts, versions, entry points, and more.
+
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
+
+**5. What is NPM? How is it used?**  
+NPM (Node Package Manager) is the default package manager for Node.js. It is used to install, manage, and publish packages or dependencies.
+
+**6. What is a callback function?**  
+A callback is a function passed into another function as an argument, which is then executed after a certain operation is completed.
+
+function greet(name, callback) {
+  console.log("Hello, " + name);
+  callback();
+}
+
+greet("Alice", () => console.log("Callback executed!"));
+
+**7. What is the difference between var, let, and const in Node.js?**  
+- `var` is function-scoped.  
+- `let` and `const` are block-scoped.  
+- `const` is used for values that should not be reassigned.
+
+let name = "Alice";
+const age = 30;
+
+if (true) {
+  let name = "Bob";  // Block-scoped
+  console.log(name);  // Output: Bob
+}
+
+console.log(name);  // Output: Alice
+
+**8. What is a module in Node.js?**  
+A module is a reusable block of code whose existence does not accidentally impact other code. Node.js has built-in modules and supports custom modules.
+
+// math.js
+module.exports.add = function(a, b) {
+  return a + b;
+};
+
+// app.js
+const math = require('./math');
+console.log(math.add(2, 3));  // Output: 5
+
+**9. How do you export a function in Node.js?**  
+Use `module.exports = functionName` to export and `require('./file')` to import.
+
+// greeting.js
+module.exports = function(name) {
+  return `Hello, ${name}!`;
+};
+
+// app.js
+const greet = require('./greeting');
+console.log(greet("Alice"));
+
+**10. How do you read environment variables in Node.js?**  
+Use `process.env.VARIABLE_NAME` to access environment variables.
+
+
+console.log(process.env.NODE_ENV);  // Output: production (if set)
+---
+
+### Intermediate Level
+
+**11. Explain the event loop in Node.js.**  
+The event loop is a mechanism that handles asynchronous operations in Node.js. It allows Node.js to perform non-blocking I/O by offloading operations to the system and listening for their completion.
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout completed");
+}, 0);
+
+console.log("End");
+
+**12. What are streams in Node.js?**  
+Streams are objects that let you read data or write data continuously. Types include Readable, Writable, Duplex, and Transform.
+
+const fs = require('fs');
+const readableStream = fs.createReadStream('example.txt', 'utf8');
+readableStream.on('data', (chunk) => {
+  console.log(chunk);
+});
+
+**13. What is the difference between require() and import?**  
+- `require()` is used in CommonJS modules (default in Node.js).  
+- `import` is used in ES6 modules and requires enabling it via package.json or file extension `.mjs`.
+
+// Using require()
+const fs = require('fs');
+                                   
+// Using import (ES6 Modules)
+import fs from 'fs';
+
+**14. How does Node.js handle child processes?**  
+Using the `child_process` module, Node.js can spawn new processes1 to handle tasks concurrently, useful for CPU-intensive tasks.
+
+const { exec } = require('child_process');
+exec('ls', (err, stdout, stderr) => {
+  if (err) {
+    console.log(`exec error: ${err}`);
+    return;
+  }
+  console.log(`stdout: ${stdout}`);`
+  console.log(`stderr: ${stderr}`);
+});
+
+**15. What is middleware in Express.js?**  
+Middleware are functions that have access to `req`, `res`, and `next()`. They are used to execute code, modify request/response, and end the request-response cycle.
+
+
+const express = require('express');
+const app = express();
+
+app.use((req, res, next) => {
+  console.log('Request received');
+  next();
+});
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+app.listen(3000);
+
+**16. How do you handle errors in async code?**  
+- Using callbacks with error-first conventions  
+- Using try/catch with async/await  
+- Using `.catch()` with promises
+
+// Using try/catch with async/await
+async function fetchData() {
+  try {
+    const data = await someAsyncOperation();
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+**17. What is the difference between process.nextTick(), setImmediate(), and setTimeout()?**  
+- `process.nextTick()`: Executes after the current operation, before I/O events.  
+- `setImmediate()`: Executes after I/O events.  
+- `setTimeout()`: Executes after a specified delay.
+
+process.nextTick(() => console.log("nextTick"));                
+setImmediate(() => console.log("setImmediate"));
+setTimeout(() => console.log("setTimeout"), 0);
+
+**18. What is Express.js?**  
+Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web applications and APIs.
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello, Express!');
+});
+
+app.listen(3000);
+
+**19. How do you connect a Node.js app to a database?**  
+Use a database driver or ORM like Mongoose for MongoDB or SequeliFe for SQL databases.
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/mydb', { useNewUrlParser: true, useUnifiedTopology: true });
+
+**20. What are Promises in Node.js?**  
+Promises are objects representing the eventual completion or failure of an asynchronous operation, allowing better handling of async code.
+
+const promise = new Promise((resolve, reject) => {
+  let success = true;
+  if (success) {
+    resolve("Data fetched successfully");
+  } else {
+    reject("Error fetching data");
+  }
+});
+
+promise
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error));
+---
+
+### Advanced Level
+
+**21. What is the concept of clustering in Node.js and why is it used?**  
+Clustering allows Node.js to use multiple cores by spawning child processes (workers) that share the same server port, improving performance and scalability.
+
+const cluster = require('cluster');
+const http = require('http');
+const numCPUs = require('os').cpus().length;
+
+if (cluster.isMaster) {
+  // Fork workers
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+
+  cluster.on('exit', (worker, code, signal) => {
+    console.log(`Worker ${worker.process.pid} died`);
+  });
+} else {
+  http.createServer((req, res) => {
+    res.writeHead(200);
+    res.end('Hello, Node.js Cluster!');
+  }).listen(8000);
+}
+
+**22. How would you manage memory leaks in a Node.js application?**  
+- Use tools like `heapdump`, `clinic.js`, or Chrome DevTools  
+- Monitor memory usage  
+- Avoid global variables  
+- Close unused resources  
+- Use weak references
+
+const heapdump = require('heapdump');
+heapdump.writeSnapshot('./my-app.heapsnapshot');
+
+
+**23. Explain how to secure a Node.js application.**  
+- Use Helmet for HTTP headers  
+- Sanitize inputs to prevent injection attacks  
+- Use HTTPS  
+- Manage environment variables securely  
+- Implement rate limiting and authentication
+
+const helmet = require('helmet');
+const express = require('express');
+const app = express();
+
+app.use(helmet());
+
+
+**24. How do you optimize performance in Node.js?**  
+- Use asynchronous/non-blocking code  
+- Leverage clustering and worker threads  
+- Use caching (e.g., Redis)  
+- Avoid memory leaks  
+- Profile and monitor performance
+
+const redis = require('redis');
+const client = redis.createClient();
+client.set('key', 'value', redis.print);
+
+
+**25. What are worker threads in Node.js?**  
+Worker threads enable multithreading in Node.js for CPU-bound tasks. They run in separate threads and can share memory using `SharedArrayBuffer`.
+
+const { Worker } = require('worker_threads');
+
+const worker = new Worker('./worker.js');
+worker.on('message', (msg) => console.log(msg));
+worker.postMessage('Hello from main thread');
+
+
+**26. What is the difference between microservices and monolithic architecture in Node.js apps?**  
+- **Monolithic**: Single large application  
+- **Microservices**: Application is split into smaller, independent services that communicate via APIs
+
+// Monolithic - one server handles everything
+const express = require('express');
+const app = express();
+app.get('/user', (req, res) => res.send('User route'));
+app.get('/order', (req, res) => res.send('Order route'));
+app.listen(3000);
+
+// Microservices - each service has its own server
+// userService.js
+const express = require('express');
+const userApp = express();
+userApp.get('/user', (req, res) => res.send('User route'));
+userApp.listen(3001);
+
+// orderService.js
+const express = require('express');
+const orderApp = express();
+orderApp.get('/order', (req, res) => res.send('Order route'));
+orderApp.listen(3002);
+
+
+**27. How does Node.js handle concurrency if it’s single-threaded?**  
+Node.js uses a single-threaded event loop with non-blocking I/O and background threads in the libuv library to handle concurrent operations.
+
+const fs = require('fs');
+
+console.log("Start");
+
+fs.readFile('file.txt', 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log("File read complete");
+});
+
+console.log("End");
+
+// Output:
+// Start
+// End
+// File read complete
+
+
+**28. Explain the internals of the Node.js event loop with an example.**  
+The event loop handles different phases (timers, pending callbacks, idle, poll, check, close callbacks). Each phase has a FIFO queue of callbacks.
+
+```js
+setTimeout(() => console.log("timeout"), 0);
+setImmediate(() => console.log("immediate"));
+process.nextTick(() => console.log("nextTick"));
+```
+
+Output:
+```
+nextTick
+immediate or timeout (depends on context)
+```
+
+**29. What are some common use cases for Node.js?**  
+- Real-time applications (e.g., chat apps)  
+- RESTful APIs and backend services  
+/* REST (Representational State Transfer) ના principles પર આધારિત હોય છે. RESTful API નો મુખ્ય હેતુ છે બે system (મોટેભાગે client અને server) વચ્ચે data exchange કરવો સરળ, standardized અને scalable રીતે.*/
+- Single Page Applications (SPA) backends  
+- Data streaming services  
+- IoT applications
+// Real-time chat using socket.io
+const express = require('express');
+const http = require('http');
+const socketIO = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIO(server);0
+
+io.on('connection', (socket) => {
+  socket.on('message', (msg) => {
+    socket.broadcast.emit('message', msg);
+  });
+});
+
+server.listen(3000, () => console.log('Server started'));
+
+
+**30. What is the purpose of the 'buffer' module in Node.js?**  
+The `buffer` module is used to handle binary data directly in memory. It is particularly useful when dealing with streams or reading from binary files.
+
+const buffer = Buffer.from('Hello');
+console.log(buffer);             // <Buffer 48 65 6c 6c 6f>
+console.log(buffer.toString()); // Hello
+
+
+**31. What is the role of the 'path' module in Node.js?**  
+The `path` module provides utilities for working with file and directory paths in a cross-platform way.
+
+const path = require('path');
+
+console.log(__dirname); // Current directory
+console.log(path.join(__dirname, 'file.txt')); // Cross-platform safe path
+
+
+**32. What is the difference between spawn() and exec() in child_process?**  
+- `spawn()`: Launches a new process with a given command and streams data.  
+- `exec()`: Executes a command in a shell and buffers the output.
+
+const { exec, spawn } = require('child_process');
+
+// exec buffers output
+exec('ls', (err, stdout, stderr) => {
+  if (err) throw err;
+  console.log('exec output:', stdout);
+});
+
+// spawn streams output
+const child = spawn('ls');
+child.stdout.on('data', (data) => {
+  console.log('spawn output:', data.toString());
+});
+
+
+**33. How does Node.js handle file system operations?**  
+Node.js uses the `fs` module to perform file operations. It provides both synchronous and asynchronous methods for reading, writing, and managing files.
+
+const fs = require('fs');
+
+// Asynchronous read
+fs.readFile('file.txt', 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log('Async Read:', data);
+});
+
+// Synchronous read
+const data = fs.readFileSync('file.txt', 'utf8');
+console.log('Sync Read:', data);
+
+
+**34. What is an event emitter in Node.js?**  
+An event emitter is an object from the `events` module that allows binding and emitting custom events. It's a key part of the event-driven architecture in Node.js.
+
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+
+emitter.on('greet', (name) => {
+  console.log(`Hello, ${name}`);
+});
+
+emitter.emit('greet', 'Alice');
+
+
+**35. What are environment variables and how are they used in Node.js?**  
+Environment variables store configuration outside of your code. In Node.js, they can be accessed using `process.env`. They are typically used for sensitive data like API keys.
+
+// In .env file: API_KEY=12345
+
+console.log(process.env.API_KEY); // Access environment variable
+
+
+**36. What is the difference between __dirname and ./ in Node.js?**  
+- `__dirname`: Absolute path of the directory containing the current module.  
+- `./`: Relative path based on the current working directory.
+
+console.log('__dirname:', __dirname);           // Absolute path
+console.log('relative path:', './file.txt');    // Relative to process.cwd()
+
+
+**37. What is the purpose of the 'util' module in Node.js?**  
+The `util` module provides helpful functions like `promisify`, `inherits`, `inspect`, and more for debugging and extending functionalities.
+
+const util = require('util');
+const fs = require('fs');
+
+const readFile = util.promisify(fs.readFile);
+readFile('file.txt', 'utf8')
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+
+
+**38. How do you prevent blocking the event loop in Node.js?**  
+By offloading CPU-intensive tasks to worker threads, using asynchronous APIs, and ensuring long operations do not run synchronously on the main thread.
+
+const { Worker } = require('worker_threads');
+
+function runWorker() {
+  return new Promise((resolve, reject) => {
+    const worker = new Worker('./heavyTask.js');
+    worker.on('message', resolve);
+    worker.on('error', reject);
+  });
+}
+runWorker().then(result => console.log(result));
+
+
+**39. What is the difference between synchronous and asynchronous file read methods in Node.js?**  
+Synchronous methods block execution until the operation is complete, while asynchronous methods allow other operations to continue.
+
+const fs = require('fs');
+
+// Synchronous (blocking)
+const data = fs.readFileSync('file.txt', 'utf8');
+console.log('Sync:', data);
+
+// Asynchronous (non-blocking)
+fs.readFile('file.txt', 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log('Async:', data);
+});
+
+
+**40. What is a memory leak and how do you detect it in Node.js?**  
+A memory leak occurs when memory that is no longer needed is not released. Tools like Chrome DevTools, Node.js Inspector, and heap snapshots can help detect them.
+
+// Simulating a memory leak
+const leaks = [];
+setInterval(() => {
+  leaks.push(new Array(1000000).fill('*'));
+  console.log(`Leak size: ${leaks.length}`);
+}, 1000);
+
+// To detect: use Chrome DevTools or --inspect flag
+// node --inspect index.js
+
+
+**41. How can you debug a Node.js application?**  
+Use `console.log()`, the built-in `debugger`, or tools like `node inspect`, Chrome DevTools, or VS Code Debugger.
+
+let x = 10;
+debugger; // Execution will pause here if debugging
+console.log('Value of x:', x);
+
+// Run using: node inspect script.js or attach debugger in VS Code
+
+
+**42. What are timers in Node.js?**  
+Timers like `setTimeout()`, `setInterval()`, and `setImmediate()` are functions that execute code after a delay or at regular intervals.
+
+setTimeout(() => console.log('After 1 sec'), 1000);
+setInterval(() => console.log('Every 2 sec'), 2000);
+setImmediate(() => console.log('Runs immediately after current event loop'));
+
+
+**43. What is a REPL in Node.js?**  
+REPL (Read-Eval-Print Loop) is a command-line interface for executing JavaScript code interactively.
+
+$ node
+> const x = 5;
+> x * 2
+10
+> .exit
+
+
+**44. What is a package-lock.json file?**  
+`package-lock.json` records the exact version of installed dependencies, ensuring consistent installs across environments.
+
+// Example snippet from package-lock.json
+{
+  "name": "demo-app",
+  "version": "1.0.0",
+  "lockfileVersion": 2,
+  "dependencies": {
+    "express": {
+      "version": "4.17.1"
+    }
+  }
+}
+
+
+**45. What is global scope in Node.js?**  
+Global scope means variables or functions that can be accessed anywhere in the code. However, Node.js limits pollution by wrapping modules in a function.
+
+global.myVar = 'Accessible globally';
+console.log(myVar); // Prints: Accessible globally
+
+
+**46. What is the role of libuv in Node.js?**  
+Libuv is a C library that provides an event loop and asynchronous I/O for Node.js, enabling non-blocking behavior.
+
+const fs = require('fs');
+fs.readFile('file.txt', 'utf8', (err, data) => {
+  console.log('Read using non-blocking I/O');
+});
+
+
+**47. What is the 'os' module in Node.js?**  
+The `os` module provides information about the operating system, such as CPU, memory, and network interfaces.
+
+const os = require('os');
+console.log('Free memory:', os.freemem());
+console.log('CPU info:', os.cpus());
+
+
+**48. What is the purpose of the 'http' module in Node.js?**  
+The `http` module allows you to create HTTP servers and handle requests and responses directly.
+
+const http = require('http');
+const server = http.createServer((req, res) => {
+  res.end('Hello from HTTP server');
+});
+server.listen(3000, () => console.log('Server running on port 3000'));
+
+
+**49. How do you implement authentication in a Node.js app?**  
+Using packages like Passport.js or JWT, along with session or token-based strategies.
+
+const jwt = require('jsonwebtoken');
+const token = jwt.sign({ userId: 123 }, 'secretkey');
+console.log(token);
+
+const verified = jwt.verify(token, 'secretkey');
+console.log(verified.userId); // 123
+
+
+**50. What is CORS and how do you handle it in Node.js?**  
+CORS (Cross-Origin Resource Sharing) is a security feature that restricts access to resources. It can be handled using the `cors` middleware in Express.
+
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+app.use(cors()); // Enable CORS
+app.get('/', (req, res) => res.send('CORS enabled'));
+app.listen(3000);
+
+
+**51. How do you handle rate limiting in Node.js APIs?**  
+Use middleware like `express-rate-limit` to limit repeated requests to public APIs and routes, helping prevent abuse or DDoS attacks.
+
+const rateLimit = require('express-rate-limit');
+const express = require('express');
+const app = express();
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per windowMs
+});
+
+app.use(limiter);
+
+
+**52. What is the difference between middleware and route handlers in Express.js?**  
+Middleware functions execute before the final route handler and can modify `req`, `res`, or pass control. Route handlers are the endpoints that send the final response.
+
+app.use((req, res, next) => {
+  console.log('Middleware executed');
+  next();
+});
+
+app.get('/user', (req, res) => {
+  res.send('Route handler');
+});
+
+
+**53. How do you use JWT in Node.js for authentication?**  
+Use the `jsonwebtoken` package to sign user data and send it as a token. On subsequent requests, verify this token to authenticate the user.
+
+const jwt = require('jsonwebtoken');
+const token = jwt.sign({ id: 1 }, 'secret', { expiresIn: '1h' });
+console.log(token);
+
+const decoded = jwt.verify(token, 'secret');
+console.log(decoded.id); // 1
+
+
+**54. What is server-side rendering (SSR) and how does Node.js support it?**  
+SSR is rendering a web page on the server instead of the client. Node.js supports SSR with frameworks like Next.js or by manually rendering templates with engines like EJS, Pug, or Handlebars.
+
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+  res.render('index', { message: 'Server-side Rendered Page' });
+});
+
+
+**55. What are some popular libraries or frameworks built on Node.js?**  
+- Express.js  
+- Koa  
+- NestJS  
+- Hapi  
+- Socket.io  
+- Next.js (for SSR)
+
+const express = require('express'); // Popular framework
+
+
+**56. What is the difference between global and local packages in Node.js?**  
+- **Global**: Installed system-wide using `-g`. Accessible via CLI anywhere.  
+- **Local**: Installed in project folder. Used as project dependencies.
+
+npm install -g nodemon    # global
+npm install express       # local
+
+
+**57. How do you monitor a Node.js application in production?**  
+Use tools like PM2, New Relic, AppDynamics, or custom logging/metrics with Winston or Morgan.
+
+pm2 start app.js
+pm2 monit
+
+
+**58. What is hot reloading, and how do you implement it in Node.js?**  
+Hot reloading automatically restarts the server on code changes. Tools like `nodemon` or `pm2` with `--watch` enable this.
+
+npm install --save-dev nodemon
+npx nodemon app.js
+
+
+**59. How does async_hooks work in Node.js?**  
+The `async_hooks` module allows tracking the lifecycle of asynchronous resources, useful for debugging and performance profiling.
+
+const async_hooks = require('async_hooks');
+
+const hook = async_hooks.createHook({
+  init(asyncId, type) {
+    console.log(`AsyncHook Init: ${type} (${asyncId})`);
+  }
+});
+hook.enable();
+
+
+**60. How can you protect sensitive configuration data in a Node.js project?**  
+Use environment variables and `.env` files with libraries like `dotenv`. Avoid committing sensitive data to version control.
+
+require('dotenv').config();
+console.log(process.env.DB_PASSWORD);
+.env file:
+DB_PASSWORD=mysecret
+
+
+🔹 1. What is Object-Oriented Programming (OOP)?
+✅ Answer:
+
+Object-Oriented Programming is a programming paradigm based on the concept of "objects", which contain both data (properties) and methods (functions). It focuses on principles like encapsulation, inheritance, polymorphism, and abstraction to make code more modular, reusable, and easier to maintain.
+
+🔹 2. How is OOP used in Node.js?
+✅ Answer:
+
+Node.js supports OOP through JavaScript's class syntax. We use classes to define blueprints for objects, and we can use inheritance to reuse logic between objects. OOP is often used in Node.js to structure code in large applications like Express.js projects, services, and database models.
+
+🔹 3. What are the four pillars of OOP?
+✅ Answer:
+
+Encapsulation: Hiding internal state and requiring all interaction to be performed through an object’s methods.
+
+Abstraction: Hiding complex implementation details and showing only the necessary parts.
+
+Inheritance: Sharing functionality between classes via a parent-child relationship.
+
+Polymorphism: Using a single interface to represent different underlying forms (methods behave differently depending on the object calling them).
+
+🔹 4. Can you show an example of OOP in Node.js?
+// Base class
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a sound.`);
+  }
+}
+
+// Derived class
+class Dog extends Animal {
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+const dog = new Dog('Buddy');
+dog.speak(); // Buddy barks.
+✅ What it shows:
+
+Inheritance (Dog extends Animal)
+
+Polymorphism (Overriding speak)
+
+Encapsulation (properties inside class)
+
+🔹 5. Why use OOP in Node.js when JS is also functional?
+✅ Answer:
+
+OOP makes complex systems easier to manage by grouping related data and behavior. In large-scale Node.js apps (like APIs or services), using OOP leads to better structure, reusable code, and maintainability. You can combine both paradigms as JavaScript supports OOP and functional programming.
+
+🏆 One Commonly Used OOP Answer:
+When asked any OOP question, this phrase is often your go-to answer:
+
+"OOP allows me to model real-world entities as classes, encapsulate related logic, and write scalable, maintainable code using inheritance and abstraction."
+
 
 
 
